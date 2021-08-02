@@ -4,25 +4,65 @@
 <!-- Hero Section Begin -->
 <section class="hero">
     <div class="hero__slider owl-carousel">
-        <div class="hero__item set-bg" data-setbg="{% static 'img/hero/hero-1.jpg' %}">
+        <div class="hero__item set-bg" data-setbg="{% static 'img/samgyetang2.jpg' %}">
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
-                        <div class="hero__text">
-                            <h2>Making your life sweeter one bite at a time!</h2>
-                            <a href="#" class="primary-btn">Our cakes</a>
+                        <div class="main__text">
+                            <h2>Samgyetang</h2>
+                            [삼계탕]<br>
+                            Samgyetang is a hot, steaming, delicious dish that features a small chicken stuffed with rice, ginseng, garlic, and  jujube.<br>
+                            Koreans traditionally eat this dish during the hottest days of summer <br>
+                            as a way to keep up their energy.
+<!--                            and to balance their body heat with the weather outside.-->
+<!--                            We have a saying: Yi yeol chi yeol (以熱治熱: 이열치열), which means “fight fire with fire.”-->
+<!--                            If it’s hot outside, you have to overcome it with hot soup!-->
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero__item set-bg" data-setbg="{% static 'img/hero/hero-1.jpg' %}">
+        <div class="hero__item set-bg" data-setbg="{% static 'img/bibimbap.jpg' %}">
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
-                        <div class="hero__text">
-                            <h2>Making your life sweeter one bite at a time!</h2>
-                            <a href="#" class="primary-btn">Our cakes</a>
+                        <div class="main__text">
+                            <h2>Bibimbap</h2>
+                            [비빔밥]<br>
+                            The word literally means "mixed rice".<br>
+                            Bibimbap is served as a bowl of warm white rice topped with namul and gochujang, doenjang, etc.<br>
+                            People from all over the world can enjoy this as healty food.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__item set-bg" data-setbg="{% static 'img/tteokbokki2.png' %}">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="main__text">
+                            <h2>Tteokbokki</h2>
+                            [떡볶이]<br>
+                            Also knwon as Korean soul food, these are cylinder-shaped rice cakes cooked in gochujang-a sweet, spciy red pepper sauce.<br>
+                            Can be served in a bowl with ingredients such as egg, noodles or cheese.<br>
+                            You almost find Tteokbokki EVERYWHERE.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__item set-bg" data-setbg="{% static 'img/pajeon2.png' %}">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="main__text">
+                            <h2>Pajeon & Makgeolli</h2>
+                            [파전과 막걸리]<br>
+                            Tender young green onions mixed with a flour batter and pan-fried in oil.<br>
+                            Served with a soy vinaigrette dipping sauce. It goes well with makgeolli, which is traditional Korean wine.<br>
+                            On rainy days, Koreans like to eat Pajeon and Makgeolli.
                         </div>
                     </div>
                 </div>
@@ -30,20 +70,84 @@
         </div>
     </div>
 </section>
-<!-- Hero Section End -->
+<!-- Main Section End -->
+
+<!--category Section Begin-->
+ <section class="class-page spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="class__item">
+                                <div class="class__item__pic set-bg" data-setbg="{% static 'img/kReport-ex.png' %}">
+                                </div>
+                                <div class="class__item__text">
+                                    <h5><a href="{% url 'at_project:k-food-report-2' %}">K-REPORT</a></h5>
+                                    <span>Wed 08 Apr 2020; 6.30pm - 9.30pm</span>
+                                    <p>Professional course: cook’s certificate in food & wine (six weeks full-time)</p>
+                                    <a href="#" class="read_more">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="class__item">
+                                <div class="class__item__pic set-bg" data-setbg="{% static 'img/kpop-bts.jpg' %}">
+                                </div>
+                                <div class="class__item__text">
+                                    <h5><a href="{% url 'at_project:idol' %}">K-POP</a></h5>
+                                    <span>Wed 08 Apr 2020; 6.30pm - 9.30pm</span>
+                                    <p>Professional course: cook’s certificate in food & wine (six weeks full-time)</p>
+                                    <a href="#" class="read_more">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="class__item">
+                                <div class="class__item__pic set-bg" data-setbg="{% static 'img/kRecipe.jpg' %}">
+                                </div>
+                                <div class="class__item__text">
+                                    <h5><a href="{% url 'at_project:food-recipe-1' %}">K-RECIPE</a></h5>
+                                    <span>Wed 08 Apr 2020; 6.30pm - 9.30pm</span>
+                                    <p>Professional course: cook’s certificate in food & wine (six weeks full-time)</p>
+                                    <a href="#" class="read_more">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="class__item">
+                                <div class="class__item__pic set-bg" data-setbg="{% static 'img/kSchool.jpg' %}">
+                                </div>
+                                <div class="class__item__text">
+                                    <h5><a href="#">K-SCHOOL</a></h5>
+                                    <span>Wed 08 Apr 2020; 6.30pm - 9.30pm</span>
+                                    <p>Professional course: cook’s certificate in food & wine (six weeks full-time)</p>
+                                    <a href="#" class="read_more">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!--category Section End-->
+
 
 <!-- About Section Begin -->
-<section class="about spad">
+<section class="class spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="about__text">
                     <div class="section-title">
-                        <span>About Cake shop</span>
-                        <h2>Cakes and bakes from the house of Queens!</h2>
+                        <span>About Us</span>
+                        <h2>한식을 소개~~~~~!</h2>
                     </div>
-                    <p>The "Cake Shop" is a Jordanian Brand that started as a small family business. The owners are
-                        Dr. Iyad Sultan and Dr. Sereen Sharabati, supported by a staff of 80 employees.</p>
+                    <p>이 페이지를 통해 레시피, 인기 음식, ~~~~~~~~~</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -77,50 +181,50 @@
 <!-- About Section End -->
 
 <!-- Categories Section Begin -->
-<div class="categories">
-    <div class="container">
-        <div class="row">
-            <div class="categories__slider owl-carousel">
-                <div class="categories__item">
-                    <div class="categories__item__icon">
-                        <span class="flaticon-029-cupcake-3"></span>
-                        <h5>Cupcake</h5>
-                    </div>
-                </div>
-                <div class="categories__item">
-                    <div class="categories__item__icon">
-                        <span class="flaticon-034-chocolate-roll"></span>
-                        <h5>Butter</h5>
-                    </div>
-                </div>
-                <div class="categories__item">
-                    <div class="categories__item__icon">
-                        <span class="flaticon-005-pancake"></span>
-                        <h5>Red Velvet</h5>
-                    </div>
-                </div>
-                <div class="categories__item">
-                    <div class="categories__item__icon">
-                        <span class="flaticon-030-cupcake-2"></span>
-                        <h5>Biscuit</h5>
-                    </div>
-                </div>
-                <div class="categories__item">
-                    <div class="categories__item__icon">
-                        <span class="flaticon-006-macarons"></span>
-                        <h5>Donut</h5>
-                    </div>
-                </div>
-                <div class="categories__item">
-                    <div class="categories__item__icon">
-                        <span class="flaticon-006-macarons"></span>
-                        <h5>Cupcake</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="categories">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="categories__slider owl-carousel">-->
+<!--                <div class="categories__item">-->
+<!--                    <div class="categories__item__icon">-->
+<!--                        <span class="flaticon-029-cupcake-3"></span>-->
+<!--                        <h5>Cupcake</h5>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="categories__item">-->
+<!--                    <div class="categories__item__icon">-->
+<!--                        <span class="flaticon-034-chocolate-roll"></span>-->
+<!--                        <h5>Butter</h5>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="categories__item">-->
+<!--                    <div class="categories__item__icon">-->
+<!--                        <span class="flaticon-005-pancake"></span>-->
+<!--                        <h5>Red Velvet</h5>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="categories__item">-->
+<!--                    <div class="categories__item__icon">-->
+<!--                        <span class="flaticon-030-cupcake-2"></span>-->
+<!--                        <h5>Biscuit</h5>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="categories__item">-->
+<!--                    <div class="categories__item__icon">-->
+<!--                        <span class="flaticon-006-macarons"></span>-->
+<!--                        <h5>Donut</h5>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="categories__item">-->
+<!--                    <div class="categories__item__icon">-->
+<!--                        <span class="flaticon-006-macarons"></span>-->
+<!--                        <h5>Cupcake</h5>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!-- Categories Section End -->
 
 <!-- Product Section Begin -->
@@ -260,114 +364,83 @@
 </section>
 <!-- Product Section End -->
 
-<!-- Class Section Begin -->
-<section class="class spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="class__form">
-                    <div class="section-title">
-                        <span>Class cakes</span>
-                        <h2>Made from your <br/>own hands</h2>
-                    </div>
-                    <form action="#">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Phone">
-                        <select>
-                            <option value="">Studying Class</option>
-                            <option value="">Writting Class</option>
-                            <option value="">Reading Class</option>
-                        </select>
-                        <input type="text" placeholder="Type your requirements">
-                        <button type="submit" class="site-btn">registration</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="class__video set-bg" data-setbg="{% static 'img/class-video.jpg' %}">
-            <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&list=RD8PJ3_p7VqHw&start_radio=1"
-               class="play-btn video-popup"><i class="fa fa-play"></i></a>
-        </div>
-    </div>
-</section>
-<!-- Class Section End -->
 
 <!-- Team Section Begin -->
-<section class="team spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-md-7 col-sm-7">
-                <div class="section-title">
-                    <span>Our team</span>
-                    <h2>Sweet Baker </h2>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-5 col-sm-5">
-                <div class="team__btn">
-                    <a href="#" class="primary-btn">Join Us</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-1.jpg' %}">
-                    <div class="team__item__text">
-                        <h6>Randy Butler</h6>
-                        <span>Decorater</span>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-2.jpg' %}">
-                    <div class="team__item__text">
-                        <h6>Randy Butler</h6>
-                        <span>Decorater</span>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-3.jpg' %}">
-                    <div class="team__item__text">
-                        <h6>Randy Butler</h6>
-                        <span>Decorater</span>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-4.jpg' %}">
-                    <div class="team__item__text">
-                        <h6>Randy Butler</h6>
-                        <span>Decorater</span>
-                        <div class="team__item__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!--<section class="team spad">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-7 col-md-7 col-sm-7">-->
+<!--                <div class="section-title">-->
+<!--                    <span>Our team</span>-->
+<!--                    <h2>Sweet Baker </h2>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-5 col-md-5 col-sm-5">-->
+<!--                <div class="team__btn">-->
+<!--                    <a href="#" class="primary-btn">Join Us</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-6">-->
+<!--                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-1.jpg' %}">-->
+<!--                    <div class="team__item__text">-->
+<!--                        <h6>Randy Butler</h6>-->
+<!--                        <span>Decorater</span>-->
+<!--                        <div class="team__item__social">-->
+<!--                            <a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-twitter"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-instagram"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-youtube-play"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-6">-->
+<!--                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-2.jpg' %}">-->
+<!--                    <div class="team__item__text">-->
+<!--                        <h6>Randy Butler</h6>-->
+<!--                        <span>Decorater</span>-->
+<!--                        <div class="team__item__social">-->
+<!--                            <a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-twitter"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-instagram"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-youtube-play"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-6">-->
+<!--                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-3.jpg' %}">-->
+<!--                    <div class="team__item__text">-->
+<!--                        <h6>Randy Butler</h6>-->
+<!--                        <span>Decorater</span>-->
+<!--                        <div class="team__item__social">-->
+<!--                            <a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-twitter"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-instagram"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-youtube-play"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-6">-->
+<!--                <div class="team__item set-bg" data-setbg="{% static 'img/team/team-4.jpg' %}">-->
+<!--                    <div class="team__item__text">-->
+<!--                        <h6>Randy Butler</h6>-->
+<!--                        <span>Decorater</span>-->
+<!--                        <div class="team__item__social">-->
+<!--                            <a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-twitter"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-instagram"></i></a>-->
+<!--                            <a href="#"><i class="fa fa-youtube-play"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 <!-- Team Section End -->
 
 <!-- Testimonial Section Begin -->

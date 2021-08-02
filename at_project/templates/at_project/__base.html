@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="offcanvas__logo">
-            <a href=""><img src="{% static 'img/logo.png' %}" alt=""></a>
+            <a href="{% url 'at_project:index' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
@@ -106,7 +106,7 @@
                                 </ul>
                             </div>
                             <div class="header__logo">
-                                <a href=""><img src="{% static 'img/logo.png' %}" alt=""></a>
+                                <a href="{% url 'at_project:index' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
                             </div>
                             <div class="header__top__right">
                                 <div class="header__top__right__links">
@@ -130,28 +130,32 @@
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li {% if request.path == '/at/k-food-report/' or request.path == '/at/repice-ajax/' %}
-                                class="active" {% endif %}><a href="{% url 'at_project:k-food-report' %}">K-Report</a>
+                            <li {% if request.path == '/at/k-food-report/' or request.path == '/at/repice-ajax/'  or request.path == '/at/k-food-report-2/' %}
+                                class="active" {% endif %}><a href="#">K-Report</a>
+                                <ul class="dropdown">
+                                    <li><a href="{% url 'at_project:k-food-report' %}">Report-1</a></li>
+                                    <li><a href="{% url 'at_project:k-food-report-2' %}">Report-2</a></li>
+                                </ul>
                             </li>
                             <li {% if request.path == '/at/idol/' %} class="active" {% endif %}><a
                                     href="{% url 'at_project:idol' %}">K-POP</a></li>
-                            <li><a href="#">K-Recipe</a>
+                            <li {% if request.path == '/at/food-recipe-1/' or request.path == '/at/food-recipe-2/' %} class="active" {% endif %} ><a href="#">K-Recipe</a>
                                 <ul class="dropdown">
-                                    {#                                                                <li><a href="{% url 'at_project:shop-detail' %}">recipe1</a></li>#}
-                                    <li><a href="{% url 'at_project:food-recipe-2' %}">recipe2</a></li>
+                                    <li><a href="{% url 'at_project:food-recipe-1' %}">Recipe-1</a></li>
+                                    <li><a href="{% url 'at_project:food-recipe-2' %}">Recipe-2</a></li>
                                     {#                                                                <li><a href="{% url 'at_project:checkout' %}">Check Out</a></li>#}
                                     {#                                                                <li><a href="{% url 'at_project:wisslist' %}">Wisslist</a></li>#}
                                     {#                                                                <li><a href="{% url 'at_project:class' %}">Class</a></li>#}
                                     {#                                                                <li><a href="{% url 'at_project:blog-details' %}">Blog Details</a></li>#}
                                 </ul>
                             </li>
-                            <li><a href="">K-School</a></li>
+{#                            <li><a href="">K-School</a></li>#}
                             <li {% if request.path == '/at/k-tour/' %} class="active" {% endif %}><a
                                     href="{% url 'at_project:k-tour' %}">K-Tour</a></li>
                             <li><a href="">K-Level</a></li>
                             <li><a href="">K-Soul</a></li>
-                            <li {% if request.path == '/at/test/' %} class="active" {% endif %}><a
-                                    href="{% url 'at_project:test' %}">tableau</a></li>
+{#                            <li {% if request.path == '/at/test/' %} class="active" {% endif %}><a#}
+{#                                    href="{% url 'at_project:test' %}">tableau</a></li>#}
                         </ul>
                     </nav>
                 </div>

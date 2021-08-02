@@ -130,7 +130,7 @@ ol {
 .set-bg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
 }
 
 .spad {
@@ -2787,7 +2787,8 @@ ol {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+  margin-bottom: 30px;
 }
 .blog__details__ingredients ul li {
   list-style: none;
@@ -3342,7 +3343,8 @@ ol {
   }
 
   .blog__details__ingredients {
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
+    margin-bottom: 50px;
   }
 
   .contact__text {
