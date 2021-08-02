@@ -177,14 +177,22 @@
 }
 
 .menu-btn-left {
-   margin-left: 180px !important;
+    margin-left: 180px !important;
 }
 
 .map-div {
-    position: relative; display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .map-div > img {
     position: absolute;
     /*padding: 15% 10% 0px 0px;*/
+}
+
+#viz-client-container {
+
+}
+.tableauPlaceholder_add{
+    position: relative; margin-left: auto; margin-right: auto; margin-bottom: 50px;
 }
