@@ -1,0 +1,64 @@
+{% extends '../__base.html' %}
+{% load static %}
+{% block add_css %}
+    <!-- 공통 CSS, JS 선언 -->
+    <link href="http://api.nongsaro.go.kr/css/api.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            height: 100%;
+            font-family: "Montserrat", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+{% endblock add_css %}
+{% block add_js %}
+    <script type="text/javascript" src="http://api.nongsaro.go.kr/js/framework.js"></script>
+{#    <script type="text/javascript" src="http://api.nongsaro.go.kr/js/openapi_nongsaro.js"></script>#}
+    <script src="{% static 'js/openapi_nongsaro.js' %}"></script>
+    <script type="text/javascript">
+        nongsaroOpenApiRequest.apiKey = "20210730BL9NIOMMKXADBBRFMBHWQ";//Api Key  - 발급받은 인증키로변경
+        nongsaroOpenApiRequest.serviceName = "monthFd";//서비스명
+        nongsaroOpenApiRequest.operationName = "monthFdYearLst";//오퍼레이션명 - nongsaroApiLoadingArea 영역에 로딩할 오퍼레이션
+        var dt = new Date();
+        nongsaroOpenApiRequest.thisYear = itoStr(dt.getFullYear());//초기값 현재년도 셋팅
+        nongsaroOpenApiRequest.thisMonth = itoStr(dt.getMonth());//초기값 현재월 셋팅
+        nongsaroOpenApiRequest.htmlArea = "nongsaroApiLoadingArea";//첫번째로 HTML을 로딩할영역
+        nongsaroOpenApiRequest.callback = "{% url 'at_project:recipe-ajax' %}";//크로스 도메인 처리를 위한 콜백페이지 - 샘플소스에 있는 콜백페이지를 서버에 올리고 올린 경로로 수정
+        function itoStr($num) {
+            $num < 10 ? $num = '0' + $num : $num;
+            return $num.toString();
+        }
+    </script>
+{% endblock add_js %}
+{% block content %}
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__text">
+                        <h2>Recipe</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html">Home</a>
+                        <a href="./shop.html">Shop</a>
+                        <span>Sweet autumn leaves</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+    <section class="product-details spad">
+        <div class="container">
+            {#   사진과 설명 부분  시작   #}
+            <div class="row" style="display: initial;">
+                <div id="nongsaroApiLoadingArea"></div><!-- 검색 HTML 로딩 영역 -->
+                <div id="nongsaroApiLoadingAreaResult"  style="margin-top: 5%;"></div><!-- 검색결과 HTML 로딩 영역 -->
+                <div id="nongsaroApiLoadingAreaResult1"></div><!-- 검색결과 HTML 로딩 영역 -->
+            </div>
+        </div>
+    </section>
+{% endblock content %}
