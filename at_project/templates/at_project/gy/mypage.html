@@ -1,0 +1,502 @@
+{% extends '../__base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__text">
+                        <h2>My Items</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__links">
+                        <a href="{% url 'at_project:index' %}">Home</a>
+                        <span>My Page</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Wishlist Section Begin -->
+    <section class="wishlist spad">
+        <div class="container">
+            <div class="row">
+                <div class="product__details__tab" style="padding-top: 10px; width: -webkit-fill-available;">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#k-report" role="tab">K-Report</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#k-pop" role="tab" aria-selected="true">K-Pop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#k-recipe" role="tab">K-Recipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#k-tour" role="tab">K-Tour</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        {#   k-report 시작   #}
+                        <div class="tab-pane" id="k-report" role="tabpanel">
+                            {#   k-repor 왼쪽 테이블 시작  #}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="wishlist__cart__table">
+                                        <table>
+                                            <tbody class="my-page-table">
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-1.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Vanilla Salted Caramel</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-2.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>German Chocolate</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-3.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>SWEET AUTUMN LEAVES</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-4.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Gluten Free Mini Dozen</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {#   왼쪽 테이블 끝  #}
+                                {#   오른쪽 테이블 시작  #}
+                                <div class="col-lg-6">
+                                    <div class="wishlist__cart__table">
+                                        <table>
+                                            <tbody class="my-page-table">
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-1.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Vanilla Salted Caramel</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-2.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>German Chocolate</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-3.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>SWEET AUTUMN LEAVES</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-4.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Gluten Free Mini Dozen</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {#   오른쪽 테이블 끝  #}
+                                <div class="shop__pagination"
+                                     style="margin-top: 4%;margin-left: auto;margin-right: auto;">
+                                    <a href="#">1</a>
+{#                                    <a href="#">2</a>#}
+{#                                    <a href="#">3</a>#}
+                                    <a href="#"><span class="arrow_carrot-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        {#   k-report 끝   #}
+                        {#   k-Pop 시작   #}
+                        <div class="tab-pane  active" id="k-pop" role="tabpanel">
+                            {#   k-Pop 왼쪽 테이블 시작  #}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="wishlist__cart__table">
+                                        <table>
+{#                                            <thead>#}
+{#                                            <tr>#}
+{#                                                <th></th>#}
+{#                                                <th></th>#}
+{#                                                <th></th>#}
+{#                                            </tr>#}
+{#                                            </thead>#}
+                                            <tbody class="my-page-table">
+                                            <tr>
+                                                {% for idol in kpop %}
+                                                    <td class="product__cart__item" style="display: inline-flex">
+                                                    <div class="row" style="border-right: 1px solid #e1e1e1;">
+                                                       <div class="col-lg-4">
+                                                            <img src="{{ idol.idol_image }}" alt="" style="width: 80%;border-radius: 10%;">
+                                                       </div>
+                                                        <div class="col-lg-4" style="margin: auto;">
+                                                            <img src="{{ idol.idol_group }}" alt="">
+                                                        </div>
+                                                        <div class="col-lg-4" style="margin: auto; text-align: center;">
+                                                            <a href="{%  url 'at_project:idol' %}"><h3 style="font-family: NanumSquareRound;color: black;">{{ idol.idol_name }}</h3></a>
+                                                        </div>
+                                                    </div>
+{#                                                        <div class="product__cart__item__pic"#}
+{#                                                             style="width: fit-content;">#}
+{#                                                            <img src="{{ idol.idol_image }}" alt="">#}
+{#                                                        </div>#}
+{#                                                        <div class="product__cart__item__pic"#}
+{#                                                             style="width: fit-content;">#}
+{#                                                            <img src="{{ idol.idol_group }}" alt="">#}
+{#                                                        </div>#}
+{#                                                        <div class="product__cart__item__text">#}
+{#                                                            <h6>{{ idol.idol_name }}</h6>#}
+{#                                                        </div>#}
+                                                    </td>
+                                                {% endfor %}
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {#   왼쪽 테이블 끝  #}
+                                {#   오른쪽 테이블 시작  #}
+                                <div class="col-lg-6">
+                                    <div class="wishlist__cart__table">
+                                        <table>
+                                            <tbody class="my-page-table">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {#   오른쪽 테이블 끝  #}
+                                <div class="shop__pagination"
+                                     style="margin-top: 4%;margin-left: auto;margin-right: auto;">
+                                    <a href="#">1</a>
+{#                                    <a href="#">2</a>#}
+{#                                    <a href="#">3</a>#}
+                                    <a href="#"><span class="arrow_carrot-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        {#   k-Pop 끝   #}
+                        {#   k-Recipe 시작   #}
+                        <div class="tab-pane" id="k-recipe" role="tabpanel">
+                            {#   k-repor 왼쪽 테이블 시작  #}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="wishlist__cart__table">
+                                        <table>
+                                            <tbody class="my-page-table">
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-1.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Vanilla Salted Caramel</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-2.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>German Chocolate</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-3.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>SWEET AUTUMN LEAVES</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-4.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Gluten Free Mini Dozen</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {#   왼쪽 테이블 끝  #}
+                                {#   오른쪽 테이블 시작  #}
+                                <div class="col-lg-6">
+                                    <div class="wishlist__cart__table">
+                                        <table>
+                                            <tbody class="my-page-table">
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-1.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Vanilla Salted Caramel</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-2.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>German Chocolate</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-3.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>SWEET AUTUMN LEAVES</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-4.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Gluten Free Mini Dozen</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {#   오른쪽 테이블 끝  #}
+                                <div class="shop__pagination"
+                                     style="margin-top: 4%;margin-left: auto;margin-right: auto;">
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#"><span class="arrow_carrot-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        {#   k-Recipe 끝   #}
+                        {#   k-Tour 시작   #}
+                        <div class="tab-pane" id="k-tour" role="tabpanel">
+                            {#   k-repor 왼쪽 테이블 시작  #}
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="wishlist__cart__table">
+                                        <table>
+                                            <tbody class="my-page-table">
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-1.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Vanilla Salted Caramel</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-2.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>German Chocolate</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-3.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>SWEET AUTUMN LEAVES</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-4.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Gluten Free Mini Dozen</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {#   왼쪽 테이블 끝  #}
+                                {#   오른쪽 테이블 시작  #}
+                                <div class="col-lg-6">
+                                    <div class="wishlist__cart__table">
+                                        <table>
+                                            <tbody class="my-page-table">
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-1.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Vanilla Salted Caramel</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-2.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>German Chocolate</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-3.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>SWEET AUTUMN LEAVES</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product__cart__item">
+                                                    <div class="product__cart__item__pic">
+                                                        <img src="{% static 'img/shop/cart/cart-4.jpg' %}" alt="">
+                                                    </div>
+                                                    <div class="product__cart__item__text">
+                                                        <h6>Gluten Free Mini Dozen</h6>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                {#   오른쪽 테이블 끝  #}
+                                <div class="shop__pagination"
+                                     style="margin-top: 4%;margin-left: auto;margin-right: auto;">
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#"><span class="arrow_carrot-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        {#   k-Tour 끝   #}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Wishlist Section End -->
+    <!-- Class Section Begin -->
+    <section class="class spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="class__form">
+                        <div class="section-title">
+                            <span>DISCOUNT CODE</span>
+                            <h2>Select CODE</h2>
+                        </div>
+                        <form>
+                            <select>
+                                <option value="">G-MARKET</option>
+                                <option value="">COUPANG</option>
+                                <option value="">11st Street</option>
+                                <option value="">Naver Smartstore</option>
+                            </select>
+                            <select>
+                                <option value="">10% off for Newcomers</option>
+                                <option value="">20% off over $30</option>
+                                <option value="">Half price over $50</option>
+                            </select>
+                            <button class="site-btn" id="code-btn">GET CODE</button>
+                            <input id="code-input" type="text" placeholder="Code Number"
+                                   style="margin-top: 5%;background-color: initial;border-bottom: 1px solid;" disabled/>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 set-bg" data-setbg="{% static 'img/co-logo.jpg' %}"
+                     style="background-size: 100%;margin-top: -14%;">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Class Section End -->
+{% endblock content %}
+{% block other_js %}
+    <script>
+        $(document).on('click', '#code-btn', (e) => {
+            e.preventDefault();
+            $('#code-input').val('ONIONCABBAGE0804')
+        })
+    </script>
+{% endblock other_js %}

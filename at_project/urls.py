@@ -11,6 +11,9 @@ urlpatterns = [
     path('test/', TableauTestViews.as_view(), name='test'),
     path('k-tour/', KTourViews.as_view(), name='k-tour'),
     path('k-tour-select/<str:id>', KTourSelectViews.as_view(), name='k-tour-select'),
+    path('mypage/', MyPageViews.as_view(), name='mypage'),
+    path('like-kpop/', UpdateKPop.as_view(), name='like-kpop'),
+    path('kpop/', KpopViews.as_view(), name='kpop'),
     # path('k-tour/', AboutViews.as_view(), name='k-tour'),
 
     # 지원

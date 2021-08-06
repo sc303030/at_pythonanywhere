@@ -1,0 +1,236 @@
+{% extends '../__base.html' %}
+{% load static %}
+{% block add_css %}
+    <link rel="stylesheet" href="{% static 'css/filter_tab.css' %}" type="text/css">
+{% endblock add_css %}
+{% block content %}
+    <!-- Blog Hero Begin -->
+    <div class="blog-hero set-bg" data-setbg="{% static 'img/bts_main.jpg' %}" style="opacity: 0.5;">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10">
+                    <div class="blog__hero__text" style="padding: 10px 20px 10px;margin-top: 50%;border-radius: 10px;">
+                        <div class="shop__option__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search" id="myInput" onkeyup="myFunction()">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="blog__details__tags"
+                             style="margin-bottom:0;margin-top: 10px;padding-top: 10px;text-align: initial;">
+                            <span>Tag</span>
+                            {#                            <a href="#">BTS</a>#}
+                            {#                            <a href="#">BLANK PINK</a>#}
+                            {#                            <a href="#">IU</a>#}
+                            <input class="checkbox-all" id="all" type="radio" name="checkbox" checked=""
+                                   onclick="all_tab(this)"/>
+                            <label for="all" class="label-color">#all</label>
+                            <input class="checkbox-bts" id="bts" type="radio" name="checkbox"
+                                   onclick="custom_tab(this)"/>
+                            <label for="bts" class="label-color">#BTS</label>
+                            <input class="checkbox-blackpink" id="blackpink" type="radio" name="checkbox"
+                                   onclick="custom_tab(this)"/>
+                            <label for="blackpink" class="label-color">#BLACK PINK</label>
+                            <input class="checkbox-iu" id="iu" type="radio" name="checkbox"
+                                   onclick="custom_tab(this)"/>
+                            <label for="iu" class="label-color">#IU</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Hero End -->
+
+    <!-- Shopping Cart Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center" id="filter-div">
+                    <div class="seperator"></div>
+                    <!-- project cards-->
+                    <div class="cards">
+                        <div class="project bts kpop-bg-1" id="bts-inner" data-int="0" onclick="inner_div(this)">
+                            <label for="bts-inner" style="position: absolute;top: 200px;left: 70px;">BTS</label>
+                        </div>
+                        <div class="project blackpink kpop-bg-2" id="blackpink-inner" data-int="0"
+                             onclick="inner_div(this)">
+                            <label for="blackpink-inner" style="position: absolute;top: 200px;left: 45px;">Black
+                                Pink</label>
+                        </div>
+                        <div class="project iu kpop-bg-3" id="iu-inner" data-int="0" onclick="inner_div(this)">
+                            <label for="iu-inner" style="position: absolute;top: 200px;left: 75px;">IU</label>
+                        </div>
+                        <div class="project bts-inner bts-bg-01" data-trigger="focus" tabindex="-1">
+                            <span class="idol-twitter" style="position: absolute;left: 125px; top: -10px;"></span>
+                            <span style="position: absolute; left: 20px; top: 200px;">[Jin] stir-fried pork</span>
+                        </div>
+                        <div class="project bts-inner bts-bg-02">
+                            <span class="idol-twitter" style="position: absolute;left: 125px;top: -10px;"></span>
+                            <span style="position: absolute; left: 18px; top: 200px;">[Jin] Samgyetang</span>
+                        </div>
+                        <div class="project bts-inner bts-bg-03">
+                            <span class="idol-youtube" style="position: absolute;left: 118px;top: -10px;"></span>
+                            <span style="position: absolute; left: 18px; top: 200px;">[BTS] stir-fried pork</span>
+                        </div>
+                        <div class="project blackpink-inner blackpink-bg-01" data-trigger="focus" tabindex="-1">
+                            <span class="idol-v-live"
+                                  style="position: absolute;left: 135px;width: 100%;height: 100%;top: 10px;"></span>
+                            <span style="position: absolute; left: 18px; top: 200px;">[Jennie] Soybean Paste Soup</span>
+                        </div>
+                        <div class="project iu-inner iu-bg-01" data-trigger="focus" tabindex="-1">
+                             <span class="idol-youtube" style="position: absolute;left: 118px;top: -10px;"></span>
+                            <span style="position: absolute; left: 18px; top: 200px;">[IU] kimchi soup</span>
+                        </div>
+                        <div class="project iu-inner iu-bg-02">
+                            <span class="idol-youtube" style="position: absolute;left: 118px;top: -10px;"></span>
+                            <span style="position: absolute; left: 18px; top: 200px;">[IU] seafood pancake</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Shopping Cart Section End -->
+
+
+{% endblock content %}
+{% block other_js %}
+    <script>
+        if ($('.checkbox-all').is(':checked') == true) {
+            $('.project.bts').addClass('custom-tabs');
+            $('.project.blackpink').addClass('custom-tabs');
+            $('.project.iu').addClass('custom-tabs');
+        }
+        var custom_tab = (e) => {
+            var pro = $('.project');
+            var id = e.id;
+            reset_inner_div();
+            if ($(e).is(':checked') == true) {
+                Array.prototype.forEach.call(pro, (ele, idx) => {
+                    var list = ele.classList[1]
+                    if (list != id) {
+                        $(ele).removeClass('custom-tabs');
+                    } else {
+                        $(ele).addClass('custom-tabs')
+                    }
+                })
+            }
+        }
+
+        var all_tab = (e) => {
+            if ($(e).is(':checked') == true) {
+                $('.project.bts').addClass('custom-tabs');
+                $('.project.blackpink').addClass('custom-tabs');
+                $('.project.iu').addClass('custom-tabs');
+            }
+            reset_inner_div();
+        }
+
+        var inner_div = (e) => {
+            var int = $(e).attr('data-int');
+            var id = $(e).attr('id')
+            var div = $(`.project.${id}`);
+            var progect = $('.project')
+            if (int == '0') {
+                Array.prototype.forEach.call(div, (ele, idx) => {
+                    $(ele).addClass('custom-tabs-inner')
+                })
+                $(e).attr('data-int', '1');
+                Array.prototype.forEach.call(progect, (ele, idx) => {
+                    if ($(ele).attr('id') != id) {
+                        $(ele).removeClass('custom-tabs')
+                    }
+                })
+            } else {
+                Array.prototype.forEach.call(div, (ele, idx) => {
+                    $(ele).removeClass('custom-tabs-inner')
+                })
+                $(e).attr('data-int', '0');
+            }
+        }
+
+        var reset_inner_div = () => {
+            $('.project.bts-inner').removeClass('custom-tabs-inner');
+            $('.project.blackpink-inner').removeClass('custom-tabs-inner');
+            $('.project.iu-inner').removeClass('custom-tabs-inner');
+            $('#bts-inner').attr('data-int', '0')
+            $('#blackpink-inner').attr('data-int', '0')
+            $('#iu-inner').attr('data-int', '0')
+        }
+
+        $('.bts-bg-01').popover({
+            {#trigger: 'focus',#}
+            container: 'body',
+            html: true,
+            {#title: 'Select',#}
+            placement: "top",
+            content: () => {
+                var clone = `<div class="popover-div">
+                                <a href="https://twitter.com/BTS_ARMY/status/466802720708784128?s=20" target="_blank">
+                                    <span class="idol-twitter"></span>
+                                </a>
+                                <div class='idol-circle idol-back-3'></div>
+                            </div>`
+                return clone;
+            }
+        });
+
+        $('.blackpink-bg-01').popover({
+            {#trigger: 'focus',#}
+            container: 'body',
+            html: true,
+            {#title: 'Select',#}
+            placement: "top",
+            content: () => {
+                var clone = `<div class="popover-div">
+                                <a class="jennie-a" href="https://www.vlive.tv/video/98903" target="_blank">
+                                    <span class="idol-v-live"></span>
+                                </a>
+                                <div class='idol-circle idol-back-4' ></div>
+                            </div>`
+                return clone;
+            }
+        });
+        $(document).on('click', '.idol-back-4', function () {
+            console.log('들어옴')
+            window.location.href = '../idol/'
+        });
+
+        $('.iu-bg-01').popover({
+            {#trigger: 'focus',#}
+            container: 'body',
+            html: true,
+            {#title: 'Select',#}
+            placement: "top",
+            content: () => {
+                var clone = `<div class="popover-div">
+                                <a href="https://www.youtube.com/watch?v=1OUD6VD1TBU" target="_blank">
+                                    <span class="idol-youtube"></span>
+                                </a>
+                                <div class='idol-circle idol-back-1'></div>
+                            </div>`
+                return clone;
+            }
+        });
+    </script>
+    <script>
+        var myFunction = () => {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("filter-div");
+            li = ul.getElementsByTagName('label');
+            Array.prototype.forEach.call(li, (ele, idx) => {
+                txtValue = ele.textContent || ele.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    $(ele).parent().addClass('custom-tabs');
+                } else {
+                    $(ele).parent().removeClass('custom-tabs');
+                }
+            })
+            reset_inner_div();
+        }
+    </script>
+{% endblock other_js %}

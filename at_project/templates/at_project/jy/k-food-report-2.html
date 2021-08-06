@@ -29,13 +29,12 @@
     <section class="blog-details spad">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="row" style="justify-content: center;">
+                <div class="row" style="justify-content: center; width: 100%;">
                     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false"
-                         data-interval="false">
+                         data-interval="false" style="width: 100%;">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class='tableauPlaceholder tableauPlaceholder_add' id='viz1627923245341'
-                                     style='position: relative'>
+                                <div class='tableauPlaceholder tableauPlaceholder_add' id='viz1627923245341'>
                                     <noscript><a href='#'><img alt='대시보드 1 '
                                                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;1_&#47;1_16279232162800&#47;1_2&#47;1_rss.png'
                                                                style='border: none'/></a></noscript>
@@ -55,11 +54,13 @@
                                         <param name='display_count' value='yes'/>
                                         <param name='language' value='ko-KR'/>
                                         <param name='filter' value='publish=yes'/>
+                                        <param name='mobile' value='yes'/>
+                                        <param name='device' value='phone'/>
                                     </object>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class='tableauPlaceholder tableauPlaceholder_add' id='viz1627923911395' style='position: relative'>
+                                <div class='tableauPlaceholder tableauPlaceholder_add' id='viz1627923911395'>
                                     <noscript><a href='#'><img alt='대시보드 1 '
                                                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2_&#47;2_16279238958780&#47;1_1&#47;1_rss.png'
                                                                style='border: none'/></a></noscript>
@@ -79,6 +80,8 @@
                                         <param name='display_count' value='yes'/>
                                         <param name='language' value='ko-KR'/>
                                         <param name='filter' value='publish=yes'/>
+                                        <param name='mobile' value='yes'/>
+                                        <param name='device' value='phone'/>
                                     </object>
                                 </div>
                             </div>
@@ -210,16 +213,17 @@
         var vizElement = divElement.getElementsByTagName('object')[0];
         if (divElement.offsetWidth > 800) {
             vizElement.style.width = '1000px';
-            vizElement.style.height = '1427px';
+            vizElement.style.height = '1400px';
         } else if (divElement.offsetWidth > 500) {
             vizElement.style.width = '1000px';
-            vizElement.style.height = '1427px';
+            vizElement.style.height = '1400px';
         } else {
-            vizElement.style.width = '1020px';
-            vizElement.style.height = '1277px';
+            vizElement.style.width = '100%';
+            vizElement.style.height = '500px';
         }
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
     <script type='text/javascript'>
@@ -227,13 +231,13 @@
         var vizElement = divElement.getElementsByTagName('object')[0];
         if (divElement.offsetWidth > 800) {
             vizElement.style.width = '1000px';
-            vizElement.style.height = '1427px';
+            vizElement.style.height = '1727px';
         } else if (divElement.offsetWidth > 500) {
             vizElement.style.width = '1000px';
-            vizElement.style.height = '1427px';
+            vizElement.style.height = '1727px';
         } else {
-            vizElement.style.width = '1020px';
-            vizElement.style.height = '1277px';
+            vizElement.style.width = '100%';
+            vizElement.style.height = '1177px';
         }
         var scriptElement = document.createElement('script');
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';

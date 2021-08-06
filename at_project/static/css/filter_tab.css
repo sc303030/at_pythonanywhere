@@ -1,0 +1,352 @@
+/*body {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    !*background-color: rgba(0, 0, 0, 0.85);*!*/
+/*    color: whitesmoke;*/
+/*    font-weight: 400;*/
+/*    font-size: 15px;*/
+/*    line-height: 1.7;*/
+/*}*/
+
+.wrapper {
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000000;
+    margin-right: 10px;
+    margin-left: 10px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: "";
+    border-radius: 2px;
+    height: 20px;
+    padding: 5px;
+    background-color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+    top: -4px;
+    z-index: -1;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    width: 0;
+}
+
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    width: calc(100% - 24px);
+}
+
+.checkbox-all:checked + label:after,
+.checkbox-all:not(:checked) + label:after {
+    background-color: hotpink;
+}
+
+.checkbox-bts:checked + label:after,
+.checkbox-bts:not(:checked) + label:after {
+    background-color: #8b00ff;
+}
+
+.checkbox-blackpink:checked + label:after,
+.checkbox-blackpink:not(:checked) + label:after {
+    background-color: #ffa6fc;
+}
+
+.checkbox-iu:checked + label:after,
+.checkbox-iu:not(:checked) + label:after {
+    background-color: #E4E724;
+}
+
+.checkbox-vue:checked + label:after,
+.checkbox-vue:not(:checked) + label:after {
+    background-color: #6edbbe;
+}
+
+.checkbox-angular:checked + label:after,
+.checkbox-angular:not(:checked) + label:after {
+    background-color: #e75139;
+}
+
+.checkbox-all:checked + label {
+    margin-left: 17px;
+}
+
+.seperator {
+    width: 100%;
+    height: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project {
+    border-radius: 4px;
+    /*box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.7);*/
+    box-shadow: 1px 1px 10px 0 rgba(16, 16, 16, 0.7);
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.3s linear;
+}
+
+.project.bts {
+    border: 3px solid #8b00ff;
+}
+
+.project.blackpink {
+    /*border: 3px solid #ffa6fc;*/
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #ffa6fc 50%, #000000 100%);
+}
+
+.project.iu {
+    border: 3px solid #E4E724;
+}
+
+.project.bts-inner {
+    /*border: 3px solid #6edbbe;*/
+    border: 1px solid #8b00ff;
+    /*box-shadow: none !important;*/
+}
+
+.project.blackpink-inner {
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #ffa6fc 50%, #000000 100%);
+}
+
+.project.iu-inner {
+    /*border: 3px solid #6edbbe;*/
+    border: 1px solid #E4E724;
+    /*box-shadow: none !important;*/
+}
+
+/*.project.angular {*/
+/*    border: 3px solid #e75139;*/
+/*}*/
+
+.project.bts,
+.project.blackpink,
+.project.iu,
+.project.bts-inner,
+.project.blackpink-inner,
+.project.iu-inner {
+    opacity: 0;
+    transform: scale(0);
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+    border-width: 0;
+}
+
+/*.checkbox-all:checked ~ .cards .project.js,*/
+/*.checkbox-all:checked ~ .cards .project.html,*/
+/*.checkbox-all:checked ~ .cards .project.react,*/
+/*.checkbox-all:checked ~ .cards .project.vue,*/
+/*.checkbox-all:checked ~ .cards .project.angular,*/
+/*.checkbox-js:checked ~ .cards .project.js,*/
+/*.checkbox-html:checked ~ .cards .project.html,*/
+/*.checkbox-react:checked ~ .cards .project.react,*/
+/*.checkbox-vue:checked ~ .cards .project.vue,*/
+/*.checkbox-angular:checked ~ .cards .project.angular {*/
+/*    opacity: 1;*/
+/*    min-height: 140px;*/
+/*    min-width: calc(22% - 28px);*/
+/*    padding: 0 10px;*/
+/*    margin-left: 10px;*/
+/*    margin-right: 10px;*/
+/*    margin-top: 20px;*/
+/*    visibility: visible;*/
+/*    transform: scale(1);*/
+/*    border-width: 3px;*/
+/*}*/
+
+
+.custom-tabs {
+    opacity: 1 !important;
+    /*min-height: 140px !important;*/
+    /*min-width: calc(22% - 28px) !important;*/
+    min-height: 180px !important;
+    min-width: calc(22% - 0px) !important;
+    padding: 0 10px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    margin-top: 20px !important;
+    visibility: visible !important;
+    transform: scale(1) !important;
+    border-width: 3px !important;
+}
+
+.custom-tabs-inner {
+    opacity: 1 !important;
+    /*min-height: 140px !important;*/
+    /*min-width: calc(22% - 28px) !important;*/
+    min-height: 180px !important;
+    min-width: calc(22% - 0px) !important;
+    padding: 0 10px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    margin-top: 20px !important;
+    visibility: visible !important;
+    transform: scale(1) !important;
+    border-width: 1px !important;
+}
+
+.project:nth-child(2n - 3) {
+    grid-row-end: span 2;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .container {
+        width: 100%;
+    }
+
+    label {
+        display: block;
+    }
+
+    .cards {
+        flex-direction: column;
+        width: auto;
+    }
+
+}
+
+.kpop-bg-1 {
+    background-image: url("../img/bts01.jpg");
+    background-size: 100%;
+}
+
+.kpop-bg-2 {
+    background-image: url("../img/blackpink02.png");
+    background-size: 100%;
+}
+
+
+.kpop-bg-3 {
+    background-image: url("../img/iu01.jpg");
+    background-size: 100%;
+}
+
+.label-color {
+    color: #444444;
+    background-color: #f2f2f2;
+}
+
+.bts-bg-01 {
+    background-image: url("../img/jin-tweet.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.idol-twitter:before {
+    font-family: FontAwesome;
+    content: "\f099";
+    color: #1da1f2;
+    font-size: -webkit-xxx-large;
+}
+
+.idol-youtube:before {
+    font-family: FontAwesome;
+    content: "\f16a";
+    color: #FF0000;
+    font-size: -webkit-xxx-large;
+}
+
+.bts-bg-02 {
+    background-image: url("../img/jin-twitter01.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bts-bg-03 {
+    background-image: url("../img/bts-jae01.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blackpink-bg-01 {
+    background-image: url("../img/jennie02.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.iu-bg-01 {
+    background-image: url("../img/iu02.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.iu-bg-02 {
+    background-image: url("../img/iu03.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.popover-div {
+    display: inline-flex;
+}
+
+.popover-div > div {
+    width: 50px !important;
+    height: 50px !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+}
+.idol-v-live {
+    background-image: url("../img/v-live.svg");
+    background-size: 20%;
+    background-repeat: inherit;
+}
+
+.popover-div > a > .idol-v-live{
+    display: block;
+    background-size: 100%;
+    height: 100%;
+}
+
+.jennie-a {
+    width: 50px;
+}

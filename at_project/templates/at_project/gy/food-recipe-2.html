@@ -1,32 +1,29 @@
 {% extends '../__base.html' %}
 {% load static %}
 {% block content %}
-
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option">
+    <!-- Blog Hero Begin -->
+    <div class="blog-hero set-bg" data-setbg="{% static 'img/shopping.jpg' %}">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="breadcrumb__text">
-                        <h2>Shopping cart</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="breadcrumb__links">
-                        <a href="./index.html">Home</a>
-                        <span>Shopping cart</span>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-7">
+                    <div class="blog__hero__text">
+                        <div class="label">Recipe</div>
+                        <h2>Calculate Material Values</h2>
+{#                        <ul>#}
+{#                            <li>By <span>Gildong Hong</span></li>#}
+{#                        </ul>#}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
+    <!-- Blog Hero End -->
 
     <!-- Shopping Cart Section Begin -->
     <section class="shopping-cart spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="shopping__cart__table">
                         <table>
                             <thead>
@@ -34,18 +31,18 @@
                                 <th>Product</th>
                                 <th>Quantity</th>
                                 <th>Total</th>
-                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <td class="product__cart__item">
                                     <div class="product__cart__item__pic">
-                                        <img src="{% static 'img/shop/cart/cart-1.jpg' %}" alt="">
+                                        <img src="{% static 'img/products/Radish-re.png' %}" alt=""
+                                             style="width: 90px;">
                                     </div>
                                     <div class="product__cart__item__text">
-                                        <h6>T-shirt Contrast Pocket</h6>
-                                        <h5>$98.49</h5>
+                                        <h6>Radish</h6>
+                                        <h5 value="3500">3,500</h5>
                                     </div>
                                 </td>
                                 <td class="quantity__item">
@@ -55,17 +52,17 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="cart__price">$ 30.00</td>
-                                <td class="cart__close"><span class="icon_close"></span></td>
+                                <td class="cart__price" value="3500">3,500</td>
+                                {#                                <td class="cart__close"><span class="icon_close"></span></td>#}
                             </tr>
                             <tr>
                                 <td class="product__cart__item">
                                     <div class="product__cart__item__pic">
-                                        <img src="{% static 'img/shop/cart/cart-2.jpg' %}" alt="">
+                                        <img src="{% static 'img/products/onion-re.png' %}" alt="" style="width: 90px;">
                                     </div>
                                     <div class="product__cart__item__text">
-                                        <h6>Diagonal Textured Cap</h6>
-                                        <h5>$98.49</h5>
+                                        <h6>Onion</h6>
+                                        <h5 value="2500">2,500</h5>
                                     </div>
                                 </td>
                                 <td class="quantity__item">
@@ -75,17 +72,17 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="cart__price">$ 32.50</td>
-                                <td class="cart__close"><span class="icon_close"></span></td>
+                                <td class="cart__price" value="2500">2,500</td>
+                                {#                                <td class="cart__close"><span class="icon_close"></span></td>#}
                             </tr>
                             <tr>
                                 <td class="product__cart__item">
                                     <div class="product__cart__item__pic">
-                                        <img src="{% static 'img/shop/cart/cart-3.jpg' %}" alt="">
+                                        <img src="{% static 'img/products/pork-re.png' %}" alt="" style="width: 90px;">
                                     </div>
                                     <div class="product__cart__item__text">
-                                        <h6>Basic Flowing Scarf</h6>
-                                        <h5>$98.49</h5>
+                                        <h6>Pork</h6>
+                                        <h5 value="3500">3,500</h5>
                                     </div>
                                 </td>
                                 <td class="quantity__item">
@@ -95,17 +92,17 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="cart__price">$ 47.00</td>
-                                <td class="cart__close"><span class="icon_close"></span></td>
+                                <td class="cart__price" value="3500">3,500</td>
+                                {#                                <td class="cart__close"><span class="icon_close"></span></td>#}
                             </tr>
                             <tr>
                                 <td class="product__cart__item">
                                     <div class="product__cart__item__pic">
-                                        <img src="{% static 'img/shop/cart/cart-4.jpg' %}" alt="">
+                                        <img src="{% static 'img/products/beef.png' %}" alt="" style="width: 90px;">
                                     </div>
                                     <div class="product__cart__item__text">
-                                        <h6>Basic Flowing Scarf</h6>
-                                        <h5>$98.49</h5>
+                                        <h6>Beef</h6>
+                                        <h5 value="7000">7,000</h5>
                                     </div>
                                 </td>
                                 <td class="quantity__item">
@@ -115,40 +112,49 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="cart__price">$ 30.00</td>
-                                <td class="cart__close"><span class="icon_close"></span></td>
+                                <td class="cart__price" value="7000">7,000</td>
+                                {#                                <td class="cart__close"><span class="icon_close"></span></td>#}
+                            </tr>
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <img src="{% static 'img/products/squash.png' %}" alt=""
+                                             style="width: 90px;">
+                                    </div>
+                                    <div class="product__cart__item__text">
+                                        <h6>Squash</h6>
+                                        <h5 value="3500">3,500</h5>
+                                    </div>
+                                </td>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="cart__price" value="3500">3,500</td>
+                                {#                                <td class="cart__close"><span class="icon_close"></span></td>#}
                             </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="continue__btn">
-                                <a href="#">Continue Shopping</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="continue__btn update__btn">
-                                <a href="#"><i class="fa fa-spinner"></i> Update cart</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="cart__discount">
-                        <h6>Discount codes</h6>
-                        <form action="#">
-                            <input type="text" placeholder="Coupon code">
-                            <button type="submit">Apply</button>
-                        </form>
-                    </div>
-                    <div class="cart__total">
-                        <h6>Cart total</h6>
-                        <ul>
-                            <li>Subtotal <span>$ 169.50</span></li>
-                            <li>Total <span>$ 169.50</span></li>
-                        </ul>
-                        <a href="#" class="primary-btn">Proceed to checkout</a>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="continue__btn update__btn" style="width: max-content;">
+                                <a><i class="fa fa-spinner"></i> Update cart</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8">
+                            <div class="cart__total" style="padding: 16px 35px;display: flex;">
+                                <h6 style="margin-top: auto;margin-bottom: auto;">Cart total</h6>
+                                <ul style="margin: auto 0px auto 55%;">
+                                    <li><span id="total-span"></span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,7 +173,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="categories__slider owl-carousel">
+                <div class="owl-carousel" id="cabbage-div">
                     <div class="categories__item price-select price-select-span" id="onion-click"
                          onclick="show_div(this)">
                         <div class="categories__item__icon">
@@ -178,7 +184,7 @@
                     <div class="categories__item price-select-span" id="cabbage-click" onclick="show_div(this)">
                         <div class="categories__item__icon">
                             <span class="price-img-2"></span>
-                            <h5>Cabbage</h5>
+                            <h5>Pork</h5>
                         </div>
                     </div>
                     <div class="categories__item price-select-span" id="radish-click" onclick="show_div(this)">
@@ -190,13 +196,13 @@
                     <div class="categories__item price-select-span" id="cucumber-click" onclick="show_div(this)">
                         <div class="categories__item__icon">
                             <span class="price-img-4"></span>
-                            <h5>Cucumber</h5>
+                            <h5>Beef</h5>
                         </div>
                     </div>
                     <div class="categories__item price-select-span" id="lettuce-click" onclick="show_div(this)">
                         <div class="categories__item__icon">
                             <span class="price-img-5"></span>
-                            <h5>Lettuce</h5>
+                            <h5>Squash</h5>
                         </div>
                     </div>
                 </div>
@@ -211,138 +217,28 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="row price-div" id="onion" name="onion-click">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin: 0px auto;">
                             <canvas id="myChart"></canvas>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
-                            <table class="table table-bordered">
-                                <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">구분</th>
-                                    <th scope="col">금주 평균 예측가</th>
-                                    <th scope="col">2일전일가</th>
-                                    <th scope="col">전일가</th>
-                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>가락시장</td>
-                                    <td>00원/kg</td>
-                                    <td>85원</td>
-                                    <td>00원</td>
-                                    <td>100원</td>
-                                </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                     <div class="row price-div price-div-none" id="cabbage" name="cabbage-click">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin: 0px auto;">
                             <canvas id="myChart2"></canvas>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
-                            <table class="table table-bordered">
-                                <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">구분</th>
-                                    <th scope="col">금주 평균 예측가</th>
-                                    <th scope="col">2일전일가</th>
-                                    <th scope="col">전일가</th>
-                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>가락시장</td>
-                                    <td>00원/kg</td>
-                                    <td>85원</td>
-                                    <td>00원</td>
-                                    <td>100원</td>
-                                </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                     <div class="row price-div price-div-none" id="cabbage" name="radish-click">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin: 0px auto;">
                             <canvas id="myChart3"></canvas>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
-                            <table class="table table-bordered">
-                                <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">구분</th>
-                                    <th scope="col">금주 평균 예측가</th>
-                                    <th scope="col">2일전일가</th>
-                                    <th scope="col">전일가</th>
-                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>가락시장</td>
-                                    <td>00원/kg</td>
-                                    <td>85원</td>
-                                    <td>00원</td>
-                                    <td>100원</td>
-                                </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                     <div class="row price-div price-div-none" id="cabbage" name="cucumber-click">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin: 0px auto;">
                             <canvas id="myChart4"></canvas>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
-                            <table class="table table-bordered">
-                                <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">구분</th>
-                                    <th scope="col">금주 평균 예측가</th>
-                                    <th scope="col">2일전일가</th>
-                                    <th scope="col">전일가</th>
-                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>가락시장</td>
-                                    <td>00원/kg</td>
-                                    <td>85원</td>
-                                    <td>00원</td>
-                                    <td>100원</td>
-                                </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                     <div class="row price-div price-div-none" id="cabbage" name="lettuce-click">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin: 0px auto;">
                             <canvas id="myChart5"></canvas>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
-                            <table class="table table-bordered">
-                                <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">구분</th>
-                                    <th scope="col">금주 평균 예측가</th>
-                                    <th scope="col">2일전일가</th>
-                                    <th scope="col">전일가</th>
-                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>가락시장</td>
-                                    <td>00원/kg</td>
-                                    <td>85원</td>
-                                    <td>00원</td>
-                                    <td>100원</td>
-                                </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
@@ -351,66 +247,72 @@
     </section>
     <!-- Product Section End -->
     <!-- Team Section Begin -->
-<section class="team spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-md-7 col-sm-7">
-                <div class="section-title">
-                    <h2>Hesitate to cook...? <br/>Buy the whole meal here!</h2>
+    <section class="team spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-7">
+                    <div class="section-title">
+                        <h2>Hesitate to cook...? <br/>Buy the whole meal here!</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team__item set-bg" data-setbg="{% static 'img/Miso01.png' %}">
+                        <div class="team__item__text">
+                            <h6>참살이장터</h6>
+                            <span>지리산산골 3년숙성 재래식 전통 집된장</span>
+                            <div class="team__item__social">
+                                <a href="https://smartstore.naver.com/wbfood/products/267550202?NaPm=ct%3Dkrz217oo%7Cci%3D1c8bba0bd4ea91c31949a7b0e074e6a35fc02ed5%7Ctr%3Dslsl%7Csn%3D263340%7Chk%3Dc235ce4ac4a494d348f50da2a5839468a1c55524"
+                                   target="_blank"><i class="naver-logo"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team__item set-bg" data-setbg="{% static 'img/Miso02.png' %}">
+                        <div class="team__item__text">
+                            <h6>맛의고수</h6>
+                            <span>차돌박이 된장찌개 500g 즉석 간편국</span>
+                            <div class="team__item__social">
+                                <a href="https://smartstore.naver.com/makko/products/5612696951?NaPm=ct%3Dkrz27hrk%7Cci%3D222f97055b9629f193ec69c71effb79077a98347%7Ctr%3Dslbrc%7Csn%3D1048741%7Chk%3D50b6591ef9fc58ae128569fdee86555c20320393"
+                                   target="_blank"><i class="naver-logo"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team__item set-bg" data-setbg="{% static 'img/Miso03.png' %}">
+                        <div class="team__item__text">
+                            <h6>마시하나</h6>
+                            <span>뚝딱 스튜 시즈닝 된장찌개 60g</span>
+                            <div class="team__item__social">
+                                <a href="https://smartstore.naver.com/beautylhouse/products/5734015341?NaPm=ct%3Dkrz2cxr4%7Cci%3D4356f36d1b5f2a659ae06281c8ebbecff2cfeb65%7Ctr%3Dslsl%7Csn%3D626026%7Chk%3Da39a1c565e735b116ac4b240cc770d94cdfc0d9b"
+                                   target="_blank"><i class="naver-logo"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team__item set-bg" data-setbg="{% static 'img/Miso04.png' %}">
+                        <div class="team__item__text">
+                            <h6>프레시지</h6>
+                            <span>고깃집 된장찌개 쿠킹박스/밀키드 (2인분)</span>
+                            <div class="team__item__social">
+                                <a href="https://shopping.naver.com/fresh/homemeal/stores/100069073/products/3856119237?NaPm=ct%3Dkrz2l9wo%7Cci%3D65730d50fd74d805989b7d29d13808529a5aaa26%7Ctr%3Dslsl%7Csn%3D446884%7Chk%3Dd71faabfeb04ac057ce2e3d5f5a1a3aac5e893bf"
+                                   target="_blank"><i
+                                        class="naver-logo"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="team__item set-bg" data-setbg="{% static 'img/curry.jpg' %}">
-                    <div class="team__item__text">
-                        <h6>오뚜기</h6>
-                        <span>3분 카레 (순한맛)</span>
-                        <div class="team__item__social">
-                            <a href="https://www.ottogimall.co.kr/shop/shopdetail.html?branduid=25&search=%25C4%25AB%25B7%25B9&sort=order&xcode=001&mcode=005&scode=001&GfDT=bWx3WQ%3D%3D#zoom-layer" target="_blank"><i class="naver-logo"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="team__item set-bg" data-setbg="{% static 'img/curry_2.jpg' %}">
-                    <div class="team__item__text">
-                        <h6>오뚜기</h6>
-                        <span>통 닭다리 카레</span>
-                        <div class="team__item__social">
-                            <a href="https://www.ottogimall.co.kr/shop/shopdetail.html?branduid=3541613&search=%25C4%25AB%25B7%25B9&sort=order&xcode=001&mcode=005&scode=005&GfDT=Z2t3Uw%3D%3D" target="_blank"><i class="naver-logo"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="team__item set-bg" data-setbg="{% static 'img/curry-3.jpg' %}">
-                    <div class="team__item__text">
-                        <h6>제이키친</h6>
-                        <span>야채 떡볶이 카레 밀떡(2인분)</span>
-                        <div class="team__item__social">
-                            <a href="https://smartstore.naver.com/j__kitchen/products/3409123787?NaPm=ct%3Dkrt3ro6o%7Cci%3D8137dc9781b53b67bf6e67ec8dd2ef0187289e6c%7Ctr%3Dslsl%7Csn%3D423373%7Chk%3D3050ded7921a0c39ad3d4d0e1e34add151bf11d8" target="_blank"><i class="naver-logo"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="team__item set-bg" data-setbg="{% static 'img/curry_4.png' %}">
-                    <div class="team__item__text">
-                        <h6>청정원</h6>
-                        <span>카레여왕 스위트망고</span>
-                        <div class="team__item__social">
-                            <a href="http://www.jungoneshop.com/c/p/P1018991001" target="_blank"><i class="naver-logo"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Team Section End -->
+    </section>
+    <!-- Team Section End -->
     {#  미래가격 끝  #}
 {% endblock content %}
 {% block other_js %}
+    <script> var predict = JSON.parse('{{ predict | escapejs }}')</script>
     <script src="{% static 'js/food_recipe_2.js' %}"></script>
 {% endblock other_js %}

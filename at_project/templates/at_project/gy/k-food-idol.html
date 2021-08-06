@@ -8,14 +8,13 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Product detail</h2>
+                        <h2>K-POP</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./index.html">Home</a>
-                        <a href="./shop.html">Shop</a>
-                        <span>Sweet autumn leaves</span>
+                        <a href="{% url 'at_project:index' %}">Home</a>
+                        <span>K-Pop</span>
                     </div>
                 </div>
             </div>
@@ -31,24 +30,52 @@
                 <div class="col-lg-6">
                     <div class="product__details__img">
                         <div class="product__details__big__img">
-                            <img class="big_img" src="{% static 'img/shop/details/product-big-1.jpg' %}" alt="">
+                            <img class="big_img" src="{% static 'img/jennie.jpg' %}" alt=""
+                                 style="border-radius: 5%;" id="idol_image">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="product__details__text" style="margin-top: 15%;">
-                        <h4>SWEET AUTUMN LEAVES</h4>
-                        <h5>$26.41</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida</p>
-                        <ul>
-                            <li>SKU: <span>17</span></li>
-                            <li>Category: <span>Biscuit cake</span></li>
-                            <li>Tags: <span>Gadgets, minimalisstic</span></li>
+                    <div class="product__details__text" style="margin-top: 8%;">
+                        <img src="{% static 'img/Blackpink.svg.png' %}" alt="" style="width: 40%;" id="idol_group">
+                        <div>
+                            <h5 style="font-family: NanumSquareRound; padding-top: 25px" id="idol_name">Jennie</h5>
+                            <form id="like-kpop" action="{% url 'at_project:like-kpop' %}">
+                                {% csrf_token %}
+                                {% if kpop %}
+                                    {% for idol in kpop %}
+                                        {% if idol.idol_name == 'Jennie' %}
+                                            <div class="like-btn-svg animate" id='heart-click' data-num="1"
+                                                 onclick="heart(this);"></div>
+                                        {% else %}
+                                            <div class="like-btn-svg" id='heart-click' data-num="0"
+                                                 onclick="heart(this);"></div>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% else %}
+                                    <div class="like-btn-svg" id='heart-click' data-num="0"
+                                         onclick="heart(this);"></div>
+                                {% endif %}
+                            </form>
+                        </div>
+                        <p>is Republic of Korea in the group you Black Pink is a member of. Exotic and unique names,
+                            because a lot of people who misunderstood by foreigners or Koreans, including two-year-old
+                            named "Gimje you 'is Hangul built into real name is Republic of Korea nationals with the
+                            Koreans is.</p>
+                        <ul class="info-font">
+                            <li>AGE: <span>25</span></li>
+                            <li>AGENCY: <span>YG Entertainment</span></li>
+                            <li style="display: inline-flex;">SITE: <span><div class="info-color">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a></div>
+                            </span></li>
                         </ul>
                     </div>
                 </div>
             </div>
+
             {#   사진과 설명 부분  끝   #}
             {#  사진 슬라이드 시작 #}
             <section class="related-products spad">
@@ -56,7 +83,7 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <div class="section-title">
-                                <h2>Related Products</h2>
+                                <h2>Favorite K-food</h2>
                             </div>
                         </div>
                     </div>
@@ -64,17 +91,17 @@
                         <div id="carouselExampleControlsNoTouching" class="carousel slide" data-touch="false"
                              data-interval="false" style="width: 60%;">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="{% static 'img/shop/details/product-big-3.jpg' %}" class="d-block w-100"
-                                         alt="...">
+                                <div class="carousel-item active" style="text-align: -webkit-center;">
+                                    <img src="{% static 'img/bob01.jpg' %}" class="d-block w-100"
+                                         alt="..." style="width: 80% !important;">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="{% static 'img/shop/details/product-big-1.jpg' %}" class="d-block w-100"
-                                         alt="...">
+                                <div class="carousel-item" style="text-align: -webkit-center;">
+                                    <img src="{% static 'img/음식사진/paste stew.jpg' %}" class="d-block w-100"
+                                         alt="..." style="width: 80% !important;">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="{% static 'img/shop/details/product-big-4.jpg' %}" class="d-block w-100"
-                                         alt="...">
+                                <div class="carousel-item" style="text-align: -webkit-center;">
+                                    <img src="{% static 'img/음식사진/kimchi.jpg' %}" class="d-block w-100"
+                                         alt="..." style="width: 80% !important;">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleControlsNoTouching" role="button"
@@ -97,45 +124,128 @@
                 <div class="col-lg-12">
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Recipe</a>
+                            <a class="nav-link" data-toggle="tab" href="#tabs-1" role="tab">Recipe</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Collection by Idols </a>
+                            <a class="nav-link active" data-toggle="tab" href="#tabs-2" role="tab" aria-selected="true">Collection
+                                by Idols </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">K-tv</a>
+                        <li class="nav-item" onclick="show()">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">K-Clip</a>
                         </li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                        <div class="tab-pane" id="tabs-1" role="tabpanel">
                             <div class="row d-flex justify-content-center">
-                                <div class="col-lg-8">
-                                    <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
-                                        tasty chunks of delicious strawberries. Made with the freshest ingredients, one
-                                        bite will send you to summertime. Each gift arrives in an elegant gift box and
-                                        arrives with a greeting card of your choice that you can personalize online!</p>
+                                <div class="col-lg-4 idol-div">
+                                    <a href="{% url 'at_project:food-recipe-2' %}"><img
+                                            src="{% static 'img/음식사진/paste stew.jpg' %}"
+                                            style="border-radius: 10px;"></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="tabs-2" role="tabpanel">
+                        <div class="tab-pane active" id="tabs-2" role="tabpanel">
                             <div class="row d-flex justify-content-center">
-                                <div class="col-lg-8">
-                                    <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
-                                        tasty chunks of delicious strawberries. Made with the freshest ingredients, one
-                                        bite will send you to summertime. Each gift arrives in an elegant gift box and
-                                        arrives with a greeting card of your choice that you can personalize online!2
-                                    </p>
+                                <div class="col-lg-8 idol-div">
+                                    <div onmouseover="idol_mouse_on(this)" onmouseout="idol_mouse_out(this)">
+                                        <div class="idol-circle idol-back-1" name="IU"></div>
+                                        <div></div>
+                                    </div>
+                                    <div onmouseover="idol_mouse_on(this)" onmouseout="idol_mouse_out(this)">
+                                        <div class="idol-circle idol-back-2" name="ROSE"></div>
+                                        <div></div>
+                                    </div>
+                                    <div onmouseover="idol_mouse_on(this)" onmouseout="idol_mouse_out(this)">
+                                        <div class="idol-circle idol-back-3" name="JIN"></div>
+                                        <div></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane" id="tabs-3" role="tabpanel">
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-8">
-                                    <p>This delectable Strawberry Pie is an extraordinary treat filled with sweet and
-                                        tasty chunks of delicious strawberries. Made with the freshest ingredients, one
-                                        bite will send you to summertime. Each gift arrives in an elegant gift box and
-                                        arrives with a greeting card of your choice that you can personalize online!3
-                                    </p>
+                                    {#   제니가 좋아하는 음식 시작  #}
+                                    <div class="row" style="margin-top:8%;">
+                                        <div class="owl-carousel" id="this-video">
+                                            <div class="col-lg-12">
+                                                <div class="product__item">
+                                                    <div class="product__item__pic set-bg"
+                                                         data-setbg="{% static 'img/video01.jpg' %}"
+                                                         style="height: 200px;border-radius: 5%;">
+                                                        <div class="product__label">
+                                                            <span>YouTube</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__item__text">
+                                                        <h6><a href="#">(ENG SUB)BLACKPINK(블랙핑크) MUKBANG INTERVIEW</a>
+                                                        </h6>
+                                                        <div class="product__item__price">2019. 11. 18</div>
+                                                        <div class="cart_add">
+                                                            <a href="https://youtu.be/AMYLB6Wa7Eo" target="_blank"
+                                                               class="you-font">보러 가기</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="product__item">
+                                                    <div class="product__item__pic set-bg"
+                                                         data-setbg="{% static 'img/video02.jpg' %}"
+                                                         style="height: 200px;border-radius: 5%;">
+                                                        <div class="product__label">
+                                                            <span>YouTube</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__item__text">
+                                                        <h6><a href="#">[Village Survival, the Eight] 제니, 눈물로 끓인 5개월 만의
+                                                            라면에 행복 ‘폭풍 흡입</a></h6>
+                                                        <div class="product__item__price">2018. 11. 24</div>
+                                                        <div class="cart_add">
+                                                            <a href="#video02" id="video02Link" target="_blank"
+                                                               class="you-font popup-modal">보러 가기</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="video02"
+                                                     class="mfp-hide embed-responsive embed-responsive-21by9 video-tube">
+                                                    <iframe width="560" height="315"
+                                                            src="https://www.youtube.com/embed/uwrBk4jWpoM?controls=0"
+                                                            title="YouTube video player" frameborder="0"
+                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                            allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="product__item">
+                                                    <div class="product__item__pic set-bg"
+                                                         data-setbg="{% static 'img/video03.jpg' %}"
+                                                         style="height: 200px;border-radius: 5%;">
+                                                        <div class="product__label">
+                                                            <span>YouTube</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product__item__text">
+                                                        <h6><a href="#">JENNIE's MUKBANG(Eating) | 제니의 먹방</a></h6>
+                                                        <div class="product__item__price">2017. 9. 6</div>
+                                                        <div class="cart_add">
+                                                            <a href="#video03" id="video03Link" target="_blank"
+                                                               class="you-font popup-modal">보러 가기</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="video03"
+                                                     class="mfp-hide embed-responsive embed-responsive-21by9 video-tube">
+                                                    <iframe width="560" height="315"
+                                                            src="https://www.youtube.com/embed/O8yKyttZHzw?controls=0"
+                                                            title="YouTube video player" frameborder="0"
+                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                            allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {#   제니 좋아하는 음식 끝  #}
                                 </div>
                             </div>
                         </div>
@@ -150,11 +260,11 @@
     <!-- Related Products Section Begin -->
     <section class="related-products spad">
         <div class="container">
-            {#   진이 좋아하는 음식 시작  #}
+            {#   제니가 좋아하는 음식 시작  #}
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-title">
-                        <h2>Jin’s Lists</h2>
+                        <h2>Related Food</h2>
                     </div>
                 </div>
             </div>
@@ -162,103 +272,55 @@
                 <div class="related__products__slider owl-carousel">
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/shop/product-1.jpg' %}">
+                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/음식사진/kimchijjigae.jpg' %}">
                                 <div class="product__label">
-                                    <span>Cupcake</span>
+                                    <span>Jjigae</span>
                                 </div>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="#">Dozen Cupcakes</a></h6>
-                                <div class="product__item__price">$32.00</div>
-                                <div class="cart_add">
-                                    <a href="#">Add to cart</a>
-                                </div>
+                                <h6><a href="#">Kimchijjigae</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/shop/product-2.jpg' %}">
+                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/음식사진/samgyetang.jpg' %}">
                                 <div class="product__label">
-                                    <span>Cupcake</span>
+                                    <span>Tang</span>
                                 </div>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="#">Cookies and Cream</a></h6>
-                                <div class="product__item__price">$30.00</div>
-                                <div class="cart_add">
-                                    <a href="#">Add to cart</a>
-                                </div>
+                                <h6><a href="#">Samgyetang</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/shop/product-3.jpg' %}">
+                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/음식사진/Seafood Spring Onion Pancake.jpg' %}">
                                 <div class="product__label">
-                                    <span>Cupcake</span>
+                                    <span>Seafood</span>
                                 </div>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="#">Gluten Free Mini Dozen</a></h6>
-                                <div class="product__item__price">$31.00</div>
-                                <div class="cart_add">
-                                    <a href="#">Add to cart</a>
-                                </div>
+                                <h6><a href="#">Seafood Spring Onion Pancake</a></h6>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/shop/product-4.jpg' %}">
+                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/음식사진/spicy-stir-fried-pork-youtube.jpg' %}">
                                 <div class="product__label">
-                                    <span>Cupcake</span>
+                                    <span>Pork</span>
                                 </div>
                             </div>
                             <div class="product__item__text">
-                                <h6><a href="#">Cookie Dough</a></h6>
-                                <div class="product__item__price">$25.00</div>
-                                <div class="cart_add">
-                                    <a href="#">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/shop/product-5.jpg' %}">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Vanilla Salted Caramel</a></h6>
-                                <div class="product__item__price">$05.00</div>
-                                <div class="cart_add">
-                                    <a href="#">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="{% static 'img/shop/product-6.jpg' %}">
-                                <div class="product__label">
-                                    <span>Cupcake</span>
-                                </div>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">German Chocolate</a></h6>
-                                <div class="product__item__price">$14.00</div>
-                                <div class="cart_add">
-                                    <a href="#">Add to cart</a>
-                                </div>
+                                <h6><a href="#">spicy-stir-fried-pork</a></h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {#   진이 좋아하는 음식 끝  #}
+            {#   제니 좋아하는 음식 끝  #}
             {#    코멘트 시작   #}
             <div class="blog__details__comment" style="margin: 10% 0 10% 0;">
                 <h5>03 Comment</h5>
@@ -314,3 +376,6 @@
     </section>
     <!-- Related Products Section End -->
 {% endblock content %}
+{% block other_js %}
+    <script type="text/javascript" src="{% static 'js/kakao_trans.js' %}"></script>
+{% endblock other_js %}

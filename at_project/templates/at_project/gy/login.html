@@ -1,0 +1,60 @@
+{% extends '../__base.html' %}
+{% load static %}
+{% block content %}
+    {% load bootstrap4 %}
+
+    <!-- Shop Section Begin -->
+    <section class="shop spad">
+        <div class="container" style="background-color: #f8fafb; padding: 5% 2% 2%;">
+            <div class="row">
+                <div class="col-lg-4" style="margin-right: auto;">
+                    <div style="max-width:500px;">
+                        <div class="mb-4">
+                            <h3>Sign In to <strong>K-food</strong></h3>
+                            <p class="mb-4" style="color: #b3b3b3;font-weight: 300;">Lorem ipsum dolor sit amet elit.
+                                Sapiente sit aut eos consectetur
+                                adipisicing.</p>
+                        </div>
+                        <div>
+                        <span class="mb-0 mt-2" style="color: red;">
+                            {% if msg %}
+                                {{ msg | safe }}
+                            {% endif %}
+                        </span>
+                            <form action="" method="POST">
+                                {% csrf_token %}
+                                {% bootstrap_form form %}
+                                <input type="submit" value="Log In" class="btn text-white btn-block btn-primary"
+                                       id="login-btn">
+                            </form>
+                            <span class="d-block text-left my-4 text-muted"> or sign in with</span>
+                            <div class="social-login">
+                                <a href="#" class="facebook">
+                                    <span class="icon-facebook mr-3"></span>
+                                </a>
+                                <a href="#" class="twitter">
+                                    <span class="icon-twitter mr-3"></span>
+                                </a>
+                                <a href="#" class="google">
+                                    <span class="icon-google mr-3"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <img src="{% static 'img/kReport-main.PNG' %}"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop Section End -->
+
+{% endblock content %}
+{% block other_js %}
+    <script>
+        Array.prototype.forEach.call($('.form-group > input'), (ele, idx) => {
+            $(ele).attr('placeholder', '')
+        })
+    </script>
+{% endblock other_js %}

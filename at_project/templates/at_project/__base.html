@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="offcanvas__logo">
-            <a href="{% url 'at_project:index' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+            <a href="{% url 'at_project:index' %}"><img src="{% static 'img/main01.jpg' %}" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
@@ -92,31 +92,51 @@
                                 <ul>
                                     <li>USD <span class="arrow_carrot-down"></span>
                                         <ul>
-                                            <li>EUR</li>
                                             <li>USD</li>
+                                            <li>KRW</li>
                                         </ul>
                                     </li>
                                     <li>ENG <span class="arrow_carrot-down"></span>
                                         <ul>
-                                            <li>Spanish</li>
                                             <li>ENG</li>
+                                            <li>KOR</li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
+                                    <li>Accounts<span class="arrow_carrot-down"></span>
+                                        <ul style="text-align: center;">
+                                            {% if request.user.is_authenticated %}
+                                                <li style="margin-right: 0;"><a href="{% url 'accounts:logout' %}"
+                                                                                style="color: white">Logout</a></li>
+                                            {% else %}
+                                                <li style="margin-right: 0;"><a href="{% url 'accounts:signin' %}"
+                                                                                style="color: white">Sign In</a></li>
+                                            {% endif %}
+                                            <li style="padding: 2px 10px;"><a href="{% url 'accounts:signup' %}"
+                                                                              style="color: white">Sign Up</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
-                            <div class="header__logo">
-                                <a href="{% url 'at_project:index' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                            <div class="header__logo" style="left: 40%">
+                                <a href="{% url 'at_project:index' %}"><img src="{% static 'img/main-default.jpg' %}"
+                                                                            alt="" style="width: 40%"></a>
                             </div>
                             <div class="header__top__right">
                                 <div class="header__top__right__links">
                                     <a href="#" class="search-switch"><img src="{% static 'img/icon/search.png' %}"
                                                                            alt=""></a>
-                                    <a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a>
+                                    <a href="{% url 'at_project:mypage' %}"><img src="{% static 'img/icon/heart.png' %}"
+                                                                                 alt=""></a>
                                 </div>
                                 <div class="header__top__right__cart">
-                                    <a href="#"><img src="{% static 'img/icon/cart.png' %}" alt=""> <span>0</span></a>
-                                    <div class="cart__price">Cart: <span>$0.00</span></div>
+                                    {% if request.user.is_authenticated %}
+                                        <div>
+                                            <span class="icon-people mr-3"></span>
+                                            <span style="font-size: larger;"><strong>{{ user.get_username }}</strong></span>
+                                        </div>
+                                    {% else %}
+                                        <span style="font-size: larger;">Please log in.</span>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
@@ -130,32 +150,24 @@
                 <div class="col-lg-12">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li {% if request.path == '/at/k-food-report/' or request.path == '/at/repice-ajax/'  or request.path == '/at/k-food-report-2/' %}
-                                class="active" {% endif %}><a href="#">K-Report</a>
+                            <li
+                                    {% if request.path == '/at/k-food-report/' or request.path == '/at/repice-ajax/'  or request.path == '/at/k-food-report-2/' %}
+                                        class="active" {% endif %}><a href="{% url 'at_project:k-food-report' %}">K-Report</a>
+                            </li>
+                            <li {% if request.path == '/at/kpop/' %} class="active" {% endif %}><a
+                                    href="{% url 'at_project:kpop' %}">K-Pop</a></li>
+                            <li
+                                    {% if request.path == '/at/food-recipe-1/' or request.path == '/at/food-recipe-2/' or request.path == '/at/recipe-ajax/' %}
+                                        class="active" {% endif %} ><a href="#">K-Recipe</a>
                                 <ul class="dropdown">
-                                    <li><a href="{% url 'at_project:k-food-report' %}">Report-1</a></li>
-                                    <li><a href="{% url 'at_project:k-food-report-2' %}">Report-2</a></li>
+                                    <li><a href="{% url 'at_project:food-recipe-1' %}">Recipe</a></li>
+                                    <li><a href="{% url 'at_project:recipe-ajax' %}">Food of the Month</a></li>
                                 </ul>
                             </li>
-                            <li {% if request.path == '/at/idol/' %} class="active" {% endif %}><a
-                                    href="{% url 'at_project:idol' %}">K-POP</a></li>
-                            <li {% if request.path == '/at/food-recipe-1/' or request.path == '/at/food-recipe-2/' %} class="active" {% endif %} ><a href="#">K-Recipe</a>
-                                <ul class="dropdown">
-                                    <li><a href="{% url 'at_project:food-recipe-1' %}">Recipe-1</a></li>
-                                    <li><a href="{% url 'at_project:food-recipe-2' %}">Recipe-2</a></li>
-                                    {#                                                                <li><a href="{% url 'at_project:checkout' %}">Check Out</a></li>#}
-                                    {#                                                                <li><a href="{% url 'at_project:wisslist' %}">Wisslist</a></li>#}
-                                    {#                                                                <li><a href="{% url 'at_project:class' %}">Class</a></li>#}
-                                    {#                                                                <li><a href="{% url 'at_project:blog-details' %}">Blog Details</a></li>#}
-                                </ul>
-                            </li>
-{#                            <li><a href="">K-School</a></li>#}
                             <li {% if request.path == '/at/k-tour/' %} class="active" {% endif %}><a
                                     href="{% url 'at_project:k-tour' %}">K-Tour</a></li>
-                            <li><a href="">K-Level</a></li>
-                            <li><a href="">K-Soul</a></li>
-{#                            <li {% if request.path == '/at/test/' %} class="active" {% endif %}><a#}
-{#                                    href="{% url 'at_project:test' %}">tableau</a></li>#}
+                            <li {% if request.path == '/at/mypage/' %} class="active" {% endif %}><a
+                                    href="{% url 'at_project:mypage' %}">MyPage</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -168,23 +180,23 @@
 {% endblock content %}
 {% block footer %}
     <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="{% static 'img/footer-bg.jpg' %}">
+    <footer class="footer set-bg" data-setbg="{% static 'img/음식사진/footer_01.jpg' %}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer__widget">
-                        <h6>WORKING HOURS</h6>
-                        <ul>
-                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>
-                            <li>Saturday: 10:00 am – 16:30 pm</li>
-                            <li>Sunday: 10:00 am – 16:30 pm</li>
-                        </ul>
-                    </div>
+{#                    <div class="footer__widget">#}
+{#                        <h6>WORKING HOURS</h6>#}
+{#                        <ul>#}
+{#                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>#}
+{#                            <li>Saturday: 10:00 am – 16:30 pm</li>#}
+{#                            <li>Sunday: 10:00 am – 16:30 pm</li>#}
+{#                        </ul>#}
+{#                    </div>#}
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
-                            <a href="#"><img src="{% static 'img/footer-logo.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/footer-main-default.png' %}" alt=""></a>
                         </div>
                         <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore dolore magna aliqua.</p>
@@ -197,14 +209,14 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer__newslatter">
-                        <h6>Subscribe</h6>
-                        <p>Get latest updates and offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Email">
-                            <button type="submit"><i class="fa fa-send-o"></i></button>
-                        </form>
-                    </div>
+{#                    <div class="footer__newslatter">#}
+{#                        <h6>Subscribe</h6>#}
+{#                        <p>Get latest updates and offers.</p>#}
+{#                        <form action="#">#}
+{#                            <input type="text" placeholder="Email">#}
+{#                            <button type="submit"><i class="fa fa-send-o"></i></button>#}
+{#                        </form>#}
+{#                    </div>#}
                 </div>
             </div>
         </div>
@@ -249,6 +261,9 @@
 
 <!-- Js Plugins -->
 <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
 <script src="{% static 'js/jquery.barfiller.js' %}"></script>

@@ -50,7 +50,7 @@
 }
 
 .price-img-2 {
-    content: url('../img/products/cabbage-re.png') !important;
+    content: url('../img/products/pork-re.png') !important;
     width: 100%;
 }
 
@@ -60,12 +60,12 @@
 }
 
 .price-img-4 {
-    content: url('../img/products/cucumber-re.png') !important;
+    content: url('../img/products/beef.png') !important;
     width: 100%;
 }
 
 .price-img-5 {
-    content: url('../img/products/lettuce-re.png') !important;
+    content: url('../img/products/squash.png') !important;
     width: 100%;
 }
 
@@ -193,6 +193,268 @@
 #viz-client-container {
 
 }
-.tableauPlaceholder_add{
-    position: relative; margin-left: auto; margin-right: auto; margin-bottom: 50px;
+
+.tableauPlaceholder_add {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.idol-div {
+    display: inline-flex;
+    padding-top: 6%;
+    justify-content: space-evenly;;
+}
+
+.idol-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #f08632;
+}
+
+.idol-circle-hover {
+    box-shadow: 1px 1px 10px;
+    opacity: 0.2;
+}
+
+.idol-circle-hover + div {
+    text-align: center;
+    margin-top: -57%;
+    position: relative;
+    /*text-align: center; !*가로정렬*!*/
+    /*line-height: 150px;*/
+    /*opacity: 1 !important;*/
+    /*color: black;*/
+}
+
+.idol-circle-out {
+    box-shadow: none;
+    opacity: 1;
+}
+
+
+.idol-back-1 {
+    background-image: url("../img/iu.jpg");
+    background-size: 100%;
+}
+
+
+.idol-back-2 {
+    background-image: url("../img/rose.jpeg");
+    background-size: 100%;
+}
+
+.idol-back-3 {
+    background-image: url("../img/jin.jpg");
+    background-size: 100%;
+}
+
+.idol-back-4 {
+    background-image: url("../img/jennie.jpg");
+    background-size: 100%;
+}
+
+.you-font {
+    font-family: NanumSquareRound;
+}
+
+.info-font {
+    font-family: NanumSquareRound;
+}
+
+.info-color {
+    padding-left: 20px;
+}
+
+.info-color > a:nth-child(1) {
+    color: #4267B2;
+    padding-right: 10px;
+}
+
+.info-color > a:nth-child(2) {
+    color: #1DA1F2;
+    padding-right: 10px;
+}
+
+.info-color > a:nth-child(3) {
+    color: #5851D8;
+    padding-right: 10px;
+}
+
+.info-color > a:nth-child(4) {
+    color: #FF0000;
+    padding-right: 10px;
+}
+
+
+.like-btn-svg {
+    width: 80px;
+    height: 100px;
+    position: absolute;
+    background: url(https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    margin-left: 35px;
+    margin-top: -109px;
+}
+
+
+.like-btn-svg.animate {
+    transition: background 1s steps(28);
+    animation: fave-like-btn-svg 1s steps(28);
+    background-position: -2800px 0;
+}
+
+@keyframes fave-like-btn-svg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -2800px 0;
+    }
+}
+
+.map-title {
+    font-size: 1rem;
+    font-family: NanumSquareRound;
+    padding: 10px 0px 10px 0px;
+    background-color: #e9ecef;
+}
+
+/* ------ 커스컴 올빼미 -----*/
+#this-video > .owl-nav {
+    font-size: -webkit-xxx-large !important;
+    position: absolute;
+    margin-top: -270px;
+}
+
+#this-video > .owl-nav > .owl-next {
+    position: absolute;
+    margin-left: 770px;
+}
+
+#this-video > .owl-nav > .owl-prev {
+    position: absolute;
+    margin-left: -30px;
+}
+
+.video-tube {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.video-tube iframe {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.map-pointer {
+    position: absolute;
+    display: none;
+}
+
+.form-group > label {
+    position: absolute;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 0;
+    color: #b3b3b3;
+    margin-top: 10px;
+}
+
+.form-group > input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+    font-size: 20px;
+    border-radius: 0;
+}
+
+#login-btn {
+    height: 54px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    background-color: #38d39f;
+    border-color: #38d39f;
+    margin-top: 15%;
+}
+
+.social-login a {
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.social-login a.facebook {
+    background: #3b5998;
+}
+
+.icon-facebook:before {
+    font-family: FontAwesome;
+    content: "\f09a";
+}
+
+.social-login a.twitter {
+    background: #1da1f2;
+}
+
+.icon-twitter:before {
+    font-family: FontAwesome;
+    content: "\f099";
+}
+
+.social-login a.google {
+    background: #ea4335;
+}
+
+.icon-google:before {
+    font-family: FontAwesome;
+    content: "\f1a0";
+}
+
+.social-login a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.my-page-table > tr > td >  div:nth-child(1) {
+    /*margin-left: 15%;*/
+}
+
+/*.user-login a.facebook {*/
+/*    background: #3b5998;*/
+/*}*/
+
+
+
+.user-login a {
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.icon-people:before {
+    font-family: FontAwesome;
+    content: "\f007";
+}
+.recipe-01 {
+    background-image: url("../img/음식사진/paste stew.jpg");
 }
