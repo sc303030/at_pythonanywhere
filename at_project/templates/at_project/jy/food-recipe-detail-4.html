@@ -1,0 +1,197 @@
+{% extends '../__base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Blog Hero Begin -->
+    <div class="blog-hero set-bg" data-setbg="{% static 'img/recipe-main.jpg' %}">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-7">
+                    <div class="blog__hero__text">
+                        <div class="label">Recipes</div>
+                        <h2>Cooking DwaejiGogi KimchiJjigae</h2>
+                        <ul>
+                            <li>By <span>Gildong Hong</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__share">
+                            <a href="https://www.youtube.com/watch?v=rJgb92JWMCE&list=PL46CAB3EEFC529843&index=47" class="youtube"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="{% static 'img/kimchijjigae.jpg' %}" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                            <div class="blog__details__text">
+                            <p>Over-fermented kimchi boiled with pork, bean curd, and green onion. Often considered Korean “soul food,” this spicy kimchi stew strikes a perfect balance with the greasy pork.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <br>
+                            <p>Jjigae (stew) is made with various ingredients, such as meat, fish, clams, bean curd, and vegetables. It is thicker than soups (guk or tang) and is served boiling hot.</p>
+                        </div>
+
+                        <div class="blog__details__recipe">
+                            <div class="blog__details__recipe__item">
+                                <h6><img src="{% static 'img/blog/details/user.png' %}" alt=""> SERVES</h6>
+                                <span>serves 4</span>
+                            </div>
+                            <div class="blog__details__recipe__item">
+                                <h6><img src="{% static 'img/blog/details/clock.png' %}" alt=""> PREP TIME</h6>
+                                <span>15 minute</span>
+                            </div>
+                            <div class="blog__details__recipe__item">
+                                <h6><img src="{% static 'img/blog/details/clock.png' %}" alt=""> COOK TIME</h6>
+                                <span>15 minute</span>
+                            </div>
+                        </div>
+                        <div class="blog__details__recipe__details">
+                                    <div class="blog__details__ingredients">
+                                        <h6>Ingredients</h6>
+                                        <ul>
+                                            <li><span>.</span>2 cups of water (250 ml)</li>
+                                            <li><span>.</span>250g for pork stew (or pork neck) </li>
+                                            <li><span>.</span>200g for sour kimchi</li>
+                                            <li><span>.</span>5 tablespoons of kimchi soup </li>
+                                            <li><span>.</span>1 teaspoon of sesame oil </li>
+                                            <li><span>.</span>1/2 onion </li>
+                                            <li><span>.</span>2 green peppers </li>
+                                            <li><span>.</span>a little green onion </li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog__details__direction">
+                                        <br>
+                                        <ul>
+                                            <li>[meat seasoning] </li>
+                                            <li><span>.</span>red pepper paste </li>
+                                            <li><span>.</span>mirim (a Cooking wine)</li>
+                                            <li><span>.</span>1 tablespoon of chopped garlic</li>
+                                            <li><span>.</span>1/2 tablespoon soup soy sauce </li>
+                                            <li><span>.</span>1/2 tablespoon of salt </li>
+                                            <li><span>.</span>pepper paste</li>
+                                        </ul>
+                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                            <div class="blog__details__direction">
+                            <h6>Directions</h6>
+                            <ul>
+                                <li><span>01.</span>Place the kimchi and kimchi brine in a shallow pot. Add pork and onion</li>
+                                <li><span>02.</span>Slice 2 green onions diagonally and add them to the pot.</li>
+                                <li><span>03.</span>Add salt, sugar, hot pepper flakes, and hot pepper paste. Drizzle sesame oil over top and add the anchovy stock</li>
+                                <li><span>04.</span>Cover and cook for 10 minutes over medium high heat.</li>
+                                <li><span>05.</span>Open and mix in the seasonings with a spoon. Lay the tofu over top.</li>
+                                <li><span>06.</span>Cover and cook another 10 to 15 minutes over medium heat.</li>
+                                <li><span>07.</span>Chop 1 green onion and put it on the top of the stew. Remove from the heat and serve right away with rice.</li>
+                            </ul>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="blog__details__tags">
+                            <span>Tag</span>
+                            <a href="#">Food</a>
+                            <a href="#">Material</a>
+                            <a href="#">Cakes</a>
+                            <a href="#">Baking</a>
+                        </div>
+                        <div class="blog__details__btns">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="blog__details__btns__item">
+                                        <a href="#"><span class="arrow_carrot-left"></span> Previous posts</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="blog__details__btns__item blog__details__btns__item--next">
+                                        <a href="#">Next posts <span class="arrow_carrot-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__details__author">
+                            <div class="blog__details__author__pic">
+                                <img src="{% static 'img/blog/details/blog-author.jpg' %}" alt="">
+                            </div>
+                            <div class="blog__details__author__text">
+                                <h6>Mitchell Holland</h6>
+                                <div class="blog__details__author__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                        <div class="blog__details__comment">
+                            <h5>03 Comment</h5>
+                            <a href="#" class="primary-btn">Leave a comment</a>
+                            <div class="blog__details__comment__item">
+                                <div class="blog__details__comment__item__pic">
+                                    <img src="{% static 'img/blog/details/comment-1.jpg' %}" alt="">
+                                </div>
+                                <div class="blog__details__comment__item__text">
+                                    <h6>Dylan Stewart</h6>
+                                    <span>26 Feb 2020</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua vel facilisis.</p>
+                                    <div class="blog__details__comment__btns">
+                                        <a href="#">Reply</a>
+                                        <a href="#">Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__details__comment__item blog__details__comment__item--reply">
+                                <div class="blog__details__comment__item__pic">
+                                    <img src="{% static 'img/blog/details/comment-2.jpg' %}" alt="">
+                                </div>
+                                <div class="blog__details__comment__item__text">
+                                    <h6>Derrick Patrick</h6>
+                                    <span>26 Feb 2020</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua vel facilisis.</p>
+                                    <div class="blog__details__comment__btns">
+                                        <a href="#">Reply</a>
+                                        <a href="#">Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__details__comment__item">
+                                <div class="blog__details__comment__item__pic">
+                                    <img src="{% static 'img/blog/details/comment-3.jpg' %}" alt="">
+                                </div>
+                                <div class="blog__details__comment__item__text">
+                                    <h6>Michael Luna</h6>
+                                    <span>26 Feb 2020</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua vel facilisis.</p>
+                                    <div class="blog__details__comment__btns">
+                                        <a href="#">Reply</a>
+                                        <a href="#">Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+{% endblock content %}

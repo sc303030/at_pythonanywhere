@@ -19,5 +19,19 @@ urlpatterns = [
     # 지원
     path('', IndexMainViews.as_view(), name='index'),
     path('k-food-report-2/', KFoodReport2Views.as_view(), name='k-food-report-2'),
+    path('k-food-report-3/', KFoodReport3Views.as_view(), name='k-food-report-3'),
+    path('k-food-report-4/', KFoodReport4Views.as_view(), name='k-food-report-4'),
+
     path('food-recipe-1/', FoodRecipe1Views.as_view(), name='food-recipe-1'),
+    path('food-recipe-main/', FoodRecipeMainViews.as_view(), name='food-recipe-main'),
+    path('food-recipe-detail/', FoodRecipeDetailViews.as_view(), name='food-recipe-detail'),
+    path('food-recipe-detail-1/', FoodRecipeDetail1Views.as_view(), name='food-recipe-detail-1'),
+    path('food-recipe-detail-2/', FoodRecipeDetail2Views.as_view(), name='food-recipe-detail-2'),
+    path('food-recipe-detail-3/', FoodRecipeDetail3Views.as_view(), name='food-recipe-detail-3'),
+    path('food-recipe-detail-4/', FoodRecipeDetail4Views.as_view(), name='food-recipe-detail-4'),
+    path('food-recipe-detail-5/', FoodRecipeDetail5Views.as_view(), name='food-recipe-detail-5'),
+
+    path('boards/', CommunityBoardsViews.as_view(), name='boards'),
+    path('writing/', CommunityBoardsWritingViews.as_view(), name='boards-writing'),
+    path('boards-test/', CommunityBoardsTestViews.as_view(), name='boards-test'),
 ]

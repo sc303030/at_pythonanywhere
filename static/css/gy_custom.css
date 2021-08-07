@@ -458,3 +458,23 @@
 .recipe-01 {
     background-image: url("../img/음식사진/paste stew.jpg");
 }
+
+.new-span {
+        color: #c0c0c0 !important;
+    font-size: 15px !important;
+    font-weight: 600;
+       text-transform: none !important;
+    letter-spacing: 1px !important;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.post-img {
+    width: 90px;
+    border-radius: 10px;
+}
+.report-img {
+    width: 90px;
+    margin-top: 15px;
+    border-radius: 10px;
+}

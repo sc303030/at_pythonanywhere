@@ -1,0 +1,211 @@
+{% extends '../__base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Blog Hero Begin -->
+    <div class="blog-hero set-bg" data-setbg="{% static 'img/recipe-main.jpg' %}">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-7">
+                    <div class="blog__hero__text">
+                        <div class="label">Recipes</div>
+                        <h2>Cooking Samgyetang</h2>
+                        <ul>
+                            <li>By <span>Gildong Hong</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__share">
+                            <a href="https://www.youtube.com/watch?v=JUmFtHqwrnk&list=PL46CAB3EEFC529843&index=40" class="youtube"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="{% static 'img/samgyetang-recipe.jpg' %}" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                            <div class="blog__details__text">
+                            <p>Tender, whole, young chicken stuffed with ginseng, jujubes, sweet rice, and whole garlic cloves and simmered until tender.
+                                The combination of chicken and ginseng creates a complex yet harmonious flavor.
+                                This is a classic summertime dish that revitalizes the body and soul.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <br><p>Tang, a formal term for guk (Korean soups), is made by boiling a wide variety of ingredients, including meat, fish, vegetables, and other ingredients, in a large amount of water and adding seasoning. The solid ingredients are eaten together with the soup’s broth.</p>
+                        </div>
+
+                        <div class="blog__details__recipe">
+                            <div class="blog__details__recipe__item">
+                                <h6><img src="{% static 'img/blog/details/user.png' %}" alt=""> SERVES</h6>
+                                <span>serves 4</span>
+                            </div>
+                            <div class="blog__details__recipe__item">
+                                <h6><img src="{% static 'img/blog/details/clock.png' %}" alt=""> PREP TIME</h6>
+                                <span>15 minute</span>
+                            </div>
+                            <div class="blog__details__recipe__item">
+                                <h6><img src="{% static 'img/blog/details/clock.png' %}" alt=""> COOK TIME</h6>
+                                <span>15 minute</span>
+                            </div>
+                        </div>
+                        <div class="jy__blog__details__recipe__details">
+                                    <div class="blog__details__ingredients">
+                                        <h6>Ingredients</h6>
+                                        <ul>
+                                            <li><span>.</span>2 large chickens</li>
+                                            <li><span>.</span>1 large onion </li>
+                                            <li><span>.</span>1 handful of yellow flag</li>
+                                            <li><span>.</span>1 ginseng</li>
+                                            <li><span>.</span>1 cup of jujube</li>
+                                            <li><span>.</span>1 cup of garlic</li>
+                                            <li><span>.</span>2 cups of glutinous rice</li>
+                                            <li><span>.</span>moderate amount of green onion </li>
+                                            <li><span>.</span></li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="blog__details__direction">
+                                        <br>
+                                        <ul>
+                                            <li>[Sauce] </li>
+                                            <li><span>.</span>salt</li>
+                                            <li><span>.</span>a little pepper</li>
+                                            <li><span>.</span>a little bit of seasame seeds</li>
+                                        </ul>
+                                    </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                            <div class="blog__details__direction">
+                            <h6>Directions</h6>
+                            <h5>Cook the chicken:</h5><br>
+                            <ul>
+                                <li><span>01.</span>Strain the rice.</li>
+                                <li><span>02.</span>Remove the giblets from the hens and rub them with salt all over to clean them nicely. Rinse under cold running water.</li>
+                                <li><span>03.</span>Put the hens on the cutting board, pat dry, and remove any extra fat around the body cavities with kitchen scissors. Cut off the tips of wings if you want.</li>
+                                <li><span>04.</span>Stuff each hen with rice, 1 ginseng, 1 jujube, and 8 garlic cloves. Put any leftover rice in the pot.</li>
+                                <li><span>05.</span>Place the hens into a heavy pot. Add 8 cups of cold water, cover, and cook over medium high heat for 30 minutes.</li>
+                                <li><span>06.</span>Turn down the heat to medium and cook another 40 minutes until the chicken, ginseng, and rice turn soft. Open up the pot from time to time and ladle some broth from the bottom over top of the chickens. If the broth evaporates too much, add more water.</li>
+                                <li><span>07.</span>Remove from the heat.</li>
+                            </ul>
+                            </div>
+                             <div class="blog__details__direction">
+                            <h6>Serve</h6>
+                                <ul>
+                                <li><span>01.</span>Place each hen into 2 individual bowls and add the chicken and broth. Sprinkle with chopped green onion and ground black pepper. Serve with kimchi, the 2 kinds of dipping sauce, and a small bowl of salt on the side for seasoning.</li>
+                                <li><span>02.</span>If you serve them in earthenware pots, preheat the pots with a little water inside (about 2 tablespoons) and add the chicken and broth. Let them sit in on the heat until the samgyetang starts to sizzle. Then remove from the heat and sprinkle green onion over top and grind some black pepper. Serve hot with the dipping sauce, kimchi, and a small bowl of salt on the side for seasoning.</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+<!--                        <div class="blog__details__print">-->
+<!--                            <a href="#" class="primary-btn"><i class="fa fa-print"></i> Print recipe</a>-->
+<!--                        </div>-->
+<!--                        <div class="blog__details__text">-->
+<!--                            <p>Tang, a formal term for guk (Korean soups), is made by boiling a wide variety of ingredients, including meat, fish, vegetables, and other ingredients, in a large amount of water and adding seasoning. The solid ingredients are eaten together with the soup’s broth.</p>-->
+<!--                        </div>-->
+                        <div class="blog__details__tags">
+                            <span>Tag</span>
+                            <a href="#">Food</a>
+                            <a href="#">Material</a>
+                            <a href="#">Cakes</a>
+                            <a href="#">Baking</a>
+                        </div>
+                        <div class="blog__details__btns">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="blog__details__btns__item">
+                                        <a href="#"><span class="arrow_carrot-left"></span> Previous posts</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="blog__details__btns__item blog__details__btns__item--next">
+                                        <a href="#">Next posts <span class="arrow_carrot-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog__details__author">
+                            <div class="blog__details__author__pic">
+                                <img src="{% static 'img/blog/details/blog-author.jpg' %}" alt="">
+                            </div>
+                            <div class="blog__details__author__text">
+                                <h6>Mitchell Holland</h6>
+                                <div class="blog__details__author__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                        <div class="blog__details__comment">
+                            <h5>03 Comment</h5>
+                            <a href="#" class="primary-btn">Leave a comment</a>
+                            <div class="blog__details__comment__item">
+                                <div class="blog__details__comment__item__pic">
+                                    <img src="{% static 'img/blog/details/comment-1.jpg' %}" alt="">
+                                </div>
+                                <div class="blog__details__comment__item__text">
+                                    <h6>Dylan Stewart</h6>
+                                    <span>26 Feb 2020</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua vel facilisis.</p>
+                                    <div class="blog__details__comment__btns">
+                                        <a href="#">Reply</a>
+                                        <a href="#">Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__details__comment__item blog__details__comment__item--reply">
+                                <div class="blog__details__comment__item__pic">
+                                    <img src="{% static 'img/blog/details/comment-2.jpg' %}" alt="">
+                                </div>
+                                <div class="blog__details__comment__item__text">
+                                    <h6>Derrick Patrick</h6>
+                                    <span>26 Feb 2020</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua vel facilisis.</p>
+                                    <div class="blog__details__comment__btns">
+                                        <a href="#">Reply</a>
+                                        <a href="#">Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog__details__comment__item">
+                                <div class="blog__details__comment__item__pic">
+                                    <img src="{% static 'img/blog/details/comment-3.jpg' %}" alt="">
+                                </div>
+                                <div class="blog__details__comment__item__text">
+                                    <h6>Michael Luna</h6>
+                                    <span>26 Feb 2020</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua vel facilisis.</p>
+                                    <div class="blog__details__comment__btns">
+                                        <a href="#">Reply</a>
+                                        <a href="#">Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+{% endblock content %}

@@ -1,0 +1,215 @@
+{% extends '../__base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__text">
+                        <h2>Recipes</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__links">
+                        <a href="{% url 'at_project:index' %}">Home</a>
+                        <span>Recipes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog__item">
+                        <div class="blog__item__pic set-bg" data-setbg="{% static 'img/pastestew.jpg' %}">
+                            <div class="blog__pic__inner">
+                                <div class="label">Recipes</div>
+                                <ul>
+                                    <li><span>된장찌개</span></li>
+                                    <li>Soybean Paste Stew</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog__item__text">
+                            <p>
+                            Doenjang-seasoned stew made with anchovy broth, fish or clams, and summer squash. The broth is thick and flavorful, and good for mixing with rice.
+                            </p>
+                            <a href="{% url 'at_project:food-recipe-detail-1' %}">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="blog__item">
+                        <div class="blog__item__pic set-bg" data-setbg="{% static 'img/spicyStirFriedPork.jpg' %}">
+                            <div class="blog__pic__inner">
+                                <div class="label">Recipes</div>
+                                <ul>
+                                    <li><span>제육볶음</span></li>
+                                    <li>Stir-fried Pork</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog__item__text">
+                            <p>
+                                Thinly sliced pork marinated in spicy ginger-gochujang and stir-fried with onion, carrots, perilla leaves, or abbage. Ingredients vary according to taste.</p>
+                            <a href="{% url 'at_project:food-recipe-detail-2' %}">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="blog__item">
+                        <div class="blog__item__pic set-bg" data-setbg="{% static 'img/seafoodpajeon.jpg' %}">
+                            <div class="blog__pic__inner">
+                                <div class="label">Recipes</div>
+                                <ul>
+                                    <li><span>해물파전</span></li>
+                                    <li>Seafood and Green Onion Pancake</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog__item__text">
+                            <h2>Haemulpajeon</h2>
+                            <p>
+                            Julienned, tender young green onion stems folded into a flour batter with squid, clam meat, and oysters and pan-fried. Served with a soy vinaigrette dipping sauce.
+                            </p>
+                            <a href="{% url 'at_project:food-recipe-detail-3' %}">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="blog__item">
+                        <div class="blog__item__pic set-bg" data-setbg="{% static 'img/kimchijjigae.jpg' %}">
+                            <div class="blog__pic__inner">
+                                <div class="label">Recipes</div>
+                                <ul>
+                                    <li><span>돼지고기 김치찌개</span></li>
+                                    <li>Pork and Kimchi Stew</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog__item__text">
+                            <p>
+                                Over-fermented kimchi boiled with pork, bean curd, and green onion. Often considered Korean “soul food,” this spicy kimchi stew strikes a perfect balance with the greasy pork.
+                            </p>
+                            <a href="{% url 'at_project:food-recipe-detail-4' %}">READ MORE</a>
+                        </div>
+
+                    </div>
+                    <div class="blog__item">
+                        <div class="blog__item__pic set-bg" data-setbg="{% static 'img/samgyetang-recipe.jpg' %}">
+                            <div class="blog__pic__inner">
+                                <div class="label">Recipes</div>
+                                <ul>
+                                    <li><span>삼계탕</span></li>
+                                    <li>Ginseng Chicken Soup</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog__item__text">
+                            <h2></h2>
+                            <p>
+                            Tender, whole, young chicken stuffed with ginseng, jujubes, sweet rice, and whole garlic cloves and simmered until tender. The combination of chicken and ginseng creates a complex yet harmonious flavor. This is a classic summertime dish that revitalizes the body and soul.
+                            </p>
+                            <a href="{% url 'at_project:food-recipe-detail-5' %}">READ MORE</a>
+                        </div>
+
+                    </div>
+                    <div class="shop__pagination">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#"><span class="arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog__sidebar">
+                        <div class="blog__sidebar__search">
+                            <form action="#">
+                                <input type="text" placeholder="Enter keyword">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="blog__sidebar__item">
+                            <h5>Follow me</h5>
+                            <div class="blog__sidebar__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="blog__sidebar__item">
+                            <h5>Popular posts</h5>
+
+                            <div class="blog__sidebar__recent">
+                                <a href="#" class="blog__sidebar__recent__item">
+                                    <div class="blog__sidebar__recent__item__pic">
+                                        <img class="post-img" src="{% static 'img/pastestew.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog__sidebar__recent__item__text">
+                                        <h4>Soybean Paste Stew</h4>
+                                        <span>된장찌개</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="blog__sidebar__recent__item">
+                                    <div class="blog__sidebar__recent__item__pic">
+                                        <img class="post-img" src="{% static 'img/kimchijjigae.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog__sidebar__recent__item__text">
+                                        <h4>Pork and Kimchi Stew</h4>
+                                        <span>돼지고기 김치찌개</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="blog__sidebar__recent__item">
+                                    <div class="blog__sidebar__recent__item__pic">
+                                        <img class="post-img" src="{% static 'img/samgyetang-recipe.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog__sidebar__recent__item__text"">
+                                        <h4>Ginseng Chicken Soup</h4>
+                                        <span>삼계탕</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="blog__sidebar__recent__item">
+                                    <div class="blog__sidebar__recent__item__pic">
+                                        <img class="post-img" src="{% static 'img/seafoodpajeon.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog__sidebar__recent__item__text">
+                                        <h4>Seafood and Green Onion Pancake</h4>
+                                        <span>해물파전</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="blog__sidebar__recent__item">
+                                    <div class="blog__sidebar__recent__item__pic">
+                                        <img class="post-img" src="{% static 'img/spicyStirFriedPork.jpg' %}" alt="">
+                                    </div>
+                                    <div class="blog__sidebar__recent__item__text">
+                                        <h4>Stir-fried Pork</h4>
+                                        <span>제육볶음</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blog__sidebar__item">
+{#                            <h5>NEWsLETTeR</h5>#}
+{#                            <p>Subscribe to our newsletter and get our newest updates right on your inbox.</p>#}
+{#                            <form action="#">#}
+{#                                <input type="text" placeholder="Your email">#}
+{#                                <label for="agg">#}
+{#                                    I agree to the terms & conditions#}
+{#                                    <input type="checkbox" id="agg">#}
+{#                                    <span class="checkmark"></span>#}
+{#                                </label>#}
+{#                                <button type="submit" class="site-btn">Subscribe</button>#}
+{#                            </form>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+{% endblock content %}

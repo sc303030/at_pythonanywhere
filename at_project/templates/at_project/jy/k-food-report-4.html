@@ -1,0 +1,91 @@
+{% extends '../__base.html' %}
+{% load static %}
+{% block add_js %}
+    <script type='text/javascript'
+            src='https://prod-apnortheast-a.online.tableau.com/javascripts/api/viz_v1.js'></script>
+{% endblock add_js %}
+{% block content %}
+
+    <!-- Blog Hero Begin -->
+    <div class="blog-hero set-bg" data-setbg="{% static 'img/kReport-detail3.jpg' %}">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-7">
+                    <div class="blog__hero__text">
+                        <div class="label">Report</div>
+                        <h2>Price Prediction of Agricultural Product</h2>
+                        <ul>
+                            <li>By <span>MinKyung Kim</span></li>
+                            <li>06 Aug 2021</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Hero End -->
+
+    <!-- Blog Details Section1 Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="row" style="justify-content: center; width: 100%;">
+                <div class='tableauPlaceholder tableauPlaceholder_add' id='viz1628328363391' style='position: relative'><noscript><a href='#'><img alt='대시보드 1 '
+                 src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3_&#47;3_16283283445140&#47;1&#47;1_rss.png' style='border: none' />
+                </a></noscript>
+                    <object class='tableauViz'  style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                        <param name='name' value='3_16283283445140&#47;1' />
+                        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3_&#47;3_16283283445140&#47;1&#47;1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='ko-KR' />
+                        <param name='filter' value='publish=yes' />
+                        <param name='mobile' value='yes'/>
+                        <param name='device' value='phone'/>
+                    </object>
+                </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                        <div class="blog__details__comment">
+                            <h5>Predicting the price of essential ingredients for Korean food</h5>
+                            <p>The essential ingredients of Korean food are radish, onion, cucumber, cabbage, and lettuce.<br>
+                                Radish is not only used for kkakdugi but also for boiling soup. The average price of radish is 1300 won to 1600 won.
+                                Onions are not only used for pickled onions, but also for steamed pork ribs, soybean paste stew, and basic stir-fried dishes. The average price of onions is 3600~4000 won.
+                                Cucumber is the most popular side dish in Korea. In Korea, cucumber is dipped in ssamjang. The average price of cucumbers is 800 to 900 won.
+                                Cabbage is a representative ingredient of kimchi that Koreans enjoy the most. It is good for various dishes such as cabbage soup and seasoned cabbage. The price of cabbage is between 2300 won and 2,500 won on average.
+                                It's best to eat lettuce wrapped in pork belly, right? If you go to a Korean pork belly restaurant, lettuce is provided as a basic. The average price of lettuce is 1100 won to 1300 won.
+                                <br>So far, we have looked at radish, onion, cucumber, cabbage, and lettuce as essential ingredients for Korean food. Use it as much as you want for Korean food!</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section1 End -->
+
+{% endblock content %}
+{% block other_js %}
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1628328363391');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if ( divElement.offsetWidth > 800 ) {
+        vizElement.style.width='1000px';vizElement.style.height='1427px';
+        } else if ( divElement.offsetWidth > 500 ) {
+        vizElement.style.width='1000px';vizElement.style.height='1427px';
+        } else { vizElement.style.width='100%';vizElement.style.height='2777px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+
+{% endblock other_js %}

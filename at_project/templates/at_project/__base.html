@@ -32,6 +32,60 @@
     <link rel="stylesheet" href="{% static 'css/gy_custom.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/jy_custom.css' %}" type="text/css">
 
+    <style type="text/css">
+        <!--
+        body {
+            font-size: 11pt;
+            padding: 0;
+            margin: 0;
+        }
+
+        h3 {
+            color: #85144b;
+            font-size: 14pt;
+        }
+
+        .contents {
+            width: 800px;
+            margin: 0 auto;
+            height: auto;
+            background-color: #e0e0e0;
+            padding: 20px;
+        }
+
+        .contents img {
+            float: left;
+            padding: 30px;
+        }
+
+        #banner {
+            position: absolute;
+            font-size: 8pt;
+            top: 5px;
+            left: 0;
+            z-index: 10;
+            background: #f1f1f1;
+            padding: 5px;
+            border: 1px solid #CCCCCC;
+            text-align: center;
+        }
+
+        #banner > span {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .banner_contents {
+            min-height: 200px;
+            border: 1px solid #c0c0c0;
+            padding: 5px;
+            margin-right: 0px;
+            margin-left: 0px;
+            background-color: white;
+        }
+
+        -->
+    </style>
     {% block add_css %}{% endblock add_css %}
     {% block add_js %}{% endblock add_js %}
 </head>
@@ -98,8 +152,9 @@
                                     </li>
                                     <li>ENG <span class="arrow_carrot-down"></span>
                                         <ul>
-                                            <li>ENG</li>
-                                            <li>KOR</li>
+{#                                            <li onclick="googleTranslateElementInit()">ENG</li>#}
+                                            <div id="google_translate_element" onchange="close();"></div>
+{#                                            <li>KOR</li>#}
                                         </ul>
                                     </li>
                                     <li>Accounts<span class="arrow_carrot-down"></span>
@@ -160,14 +215,18 @@
                                     {% if request.path == '/at/food-recipe-1/' or request.path == '/at/food-recipe-2/' or request.path == '/at/recipe-ajax/' %}
                                         class="active" {% endif %} ><a href="#">K-Recipe</a>
                                 <ul class="dropdown">
-                                    <li><a href="{% url 'at_project:food-recipe-1' %}">Recipe</a></li>
+                                    <li><a href="{% url 'at_project:food-recipe-main' %}">Recipe</a></li>
                                     <li><a href="{% url 'at_project:recipe-ajax' %}">Food of the Month</a></li>
                                 </ul>
                             </li>
                             <li {% if request.path == '/at/k-tour/' %} class="active" {% endif %}><a
                                     href="{% url 'at_project:k-tour' %}">K-Tour</a></li>
-                            <li {% if request.path == '/at/mypage/' %} class="active" {% endif %}><a
-                                    href="{% url 'at_project:mypage' %}">MyPage</a></li>
+                            <li {% if request.path == '/at/boards/' %}class="active" {% endif %}><a
+                                    href="#">COMMUNITY</a>
+                                <ul class="dropdown">
+                                    <li><a href="{% url 'at_project:boards' %}">BOARD</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -176,7 +235,37 @@
     </header>
     <!-- Header Section End -->
 {% endblock header %}
+<!-- 배너 -->
+<div style="position:relative;float:right;width:150px;top:-15px;right: 55px;">
+    <div id="banner">
+        <span>배너 광고 구역</span>
+        <div class="row banner_contents">
+            <div class="col-lg-12" style="display: inline-grid;">
+                <div class="col-lg-6" style="display: inline-grid;">
+                    <img src="{% static 'img/광고배너 로고모음/aT_로고.jpg' %}" style="width: 100px; max-width: none;">
+                    <span style="display: flex;    padding-top: 10px">Korean Agro-Fisheries&Food Trade Corporation</span>
+                </div>
+                <div class="col-lg-6" style="display: inline-grid; margin-top: 20px;">
+                    <img src="{% static 'img/광고배너 로고모음/두푸드_로고.png' %}" style="width: 100px; max-width: none;">
+                    <span style="display: flex;    padding-top: 10px">Healthy Korean Meal Kit Delivery</span>
+                </div>
+            </div>
+            <div class="col-lg-12" style="display: inline-grid; margin-top: 20px;">
+                <div class="col-lg-6" style="display: inline-grid; margin-top: 20px;">
+                    <img src="{% static 'img/광고배너 로고모음/세이팩스_로고.png' %}" style="width: 100px; max-width: none;">
+                    <span style="display: flex;    padding-top: 10px">Free your luggage</span>
+                </div>
+                <div class="col-lg-6" style="display: inline-grid; margin-top: 20px;">
+                    <img src="{% static 'img/광고배너 로고모음/오마이집_로고.png' %}" style="width: 100px; max-width: none;">
+                    <span style="display: flex;    padding-top: 10px">Cheap foreign shipping </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% block content %}
+
 {% endblock content %}
 {% block footer %}
     <!-- Footer Section Begin -->
@@ -184,22 +273,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
-{#                    <div class="footer__widget">#}
-{#                        <h6>WORKING HOURS</h6>#}
-{#                        <ul>#}
-{#                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>#}
-{#                            <li>Saturday: 10:00 am – 16:30 pm</li>#}
-{#                            <li>Sunday: 10:00 am – 16:30 pm</li>#}
-{#                        </ul>#}
-{#                    </div>#}
+                    {#                    <div class="footer__widget">#}
+                    {#                        <h6>WORKING HOURS</h6>#}
+                    {#                        <ul>#}
+                    {#                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>#}
+                    {#                            <li>Saturday: 10:00 am – 16:30 pm</li>#}
+                    {#                            <li>Sunday: 10:00 am – 16:30 pm</li>#}
+                    {#                        </ul>#}
+                    {#                    </div>#}
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__logo">
                             <a href="#"><img src="{% static 'img/footer-main-default.png' %}" alt=""></a>
                         </div>
-                        <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore dolore magna aliqua.</p>
+                        <p>The most popular & fanciest website to enjoy & eat & buy K-Foods
+                            Get more information at our SNS below!</p>
                         <div class="footer__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -209,14 +298,14 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
-{#                    <div class="footer__newslatter">#}
-{#                        <h6>Subscribe</h6>#}
-{#                        <p>Get latest updates and offers.</p>#}
-{#                        <form action="#">#}
-{#                            <input type="text" placeholder="Email">#}
-{#                            <button type="submit"><i class="fa fa-send-o"></i></button>#}
-{#                        </form>#}
-{#                    </div>#}
+                    {#                    <div class="footer__newslatter">#}
+                    {#                        <h6>Subscribe</h6>#}
+                    {#                        <p>Get latest updates and offers.</p>#}
+                    {#                        <form action="#">#}
+                    {#                            <input type="text" placeholder="Email">#}
+                    {#                            <button type="submit"><i class="fa fa-send-o"></i></button>#}
+                    {#                        </form>#}
+                    {#                    </div>#}
                 </div>
             </div>
         </div>
@@ -273,7 +362,23 @@
 <script src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
 <script src="{% static 'js/gy_custom.js' %}"></script>
+<script language="JavaScript">
+    <!--
+    $(window).scroll(function () {
+        $('#banner').animate({top: $(window).scrollTop() + "px"}, {queue: false, duration: 500});
+    });
 
+    //-->
+</script>
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'ko'},
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 {% block other_js %}
 {% endblock other_js %}
 </body>

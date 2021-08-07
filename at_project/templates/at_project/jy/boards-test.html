@@ -1,0 +1,415 @@
+{% extends '../__base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__text">
+                        <h2>Boards</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__links">
+                        <a href="./index.html">Community</a>
+                        <span>Boards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Shopping Cart Section Begin -->
+    <section class="shopping-cart spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="shopping__cart__table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <img src="{% static 'img/shop/cart/cart-1.jpg' %}" alt="">
+                                    </div>
+                                    <div class="product__cart__item__text">
+                                        <h6>T-shirt Contrast Pocket</h6>
+                                        <h5>$98.49</h5>
+                                    </div>
+                                </td>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="cart__price">$ 30.00</td>
+                                <td class="cart__close"><span class="icon_close"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <img src="{% static 'img/shop/cart/cart-2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="product__cart__item__text">
+                                        <h6>Diagonal Textured Cap</h6>
+                                        <h5>$98.49</h5>
+                                    </div>
+                                </td>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="cart__price">$ 32.50</td>
+                                <td class="cart__close"><span class="icon_close"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <img src="{% static 'img/shop/cart/cart-3.jpg' %}" alt="">
+                                    </div>
+                                    <div class="product__cart__item__text">
+                                        <h6>Basic Flowing Scarf</h6>
+                                        <h5>$98.49</h5>
+                                    </div>
+                                </td>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="cart__price">$ 47.00</td>
+                                <td class="cart__close"><span class="icon_close"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="product__cart__item">
+                                    <div class="product__cart__item__pic">
+                                        <img src="{% static 'img/shop/cart/cart-4.jpg' %}" alt="">
+                                    </div>
+                                    <div class="product__cart__item__text">
+                                        <h6>Basic Flowing Scarf</h6>
+                                        <h5>$98.49</h5>
+                                    </div>
+                                </td>
+                                <td class="quantity__item">
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="cart__price">$ 30.00</td>
+                                <td class="cart__close"><span class="icon_close"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="continue__btn">
+                                <a href="#">Continue Shopping</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="continue__btn update__btn">
+                                <a href="#"><i class="fa fa-spinner"></i> Update cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cart__discount">
+                        <h6>Discount codes</h6>
+                        <form action="#">
+                            <input type="text" placeholder="Coupon code">
+                            <button type="submit">Apply</button>
+                        </form>
+                    </div>
+                    <div class="cart__total">
+                        <h6>Cart total</h6>
+                        <ul>
+                            <li>Subtotal <span>$ 169.50</span></li>
+                            <li>Total <span>$ 169.50</span></li>
+                        </ul>
+                        <a href="#" class="primary-btn">Proceed to checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shopping Cart Section End -->
+    {#  미래가격 시작  #}
+    <!-- Categories Section Begin -->
+    <div class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <h2>Challenge the higher level</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel" id="cabbage-div">
+                    <div class="categories__item price-select price-select-span" id="veryeasy-click" onclick="show_div(this)">
+                        <div class="categories__item__icon">
+                            <span class="challenge-img-1"></span>
+                            <h5>very easy</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item price-select-span" id="easy-click" onclick="show_div(this)">
+                        <div class="categories__item__icon">
+                            <span class="challenge-img-2"></span>
+                            <h5>easy</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item price-select-span" id="normal-click" onclick="show_div(this)">
+                        <div class="categories__item__icon">
+                            <span class="challenge-img-3"></span>
+                            <h5>normal</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item price-select-span" id="hard-click" onclick="show_div(this)">
+                        <div class="categories__item__icon">
+                            <span class="challenge-img-4"></span>
+                            <h5>hard</h5>
+                        </div>
+                    </div>
+                    <div class="categories__item price-select-span" id="veryhard-click" onclick="show_div(this)">
+                        <div class="categories__item__icon">
+                            <span class="challenge-img-5"></span>
+                            <h5>very hard</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categories Section End -->
+
+    <!-- Product Section Begin -->
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row price-div" id="onion" name="onion-click">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">금주 평균 예측가</th>
+                                    <th scope="col">2일전일가</th>
+                                    <th scope="col">전일가</th>
+                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>가락시장</td>
+                                    <td>00원/kg</td>
+                                    <td>85원</td>
+                                    <td>00원</td>
+                                    <td>100원</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row price-div price-div-none" id="cabbage" name="cabbage-click">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">금주 평균 예측가</th>
+                                    <th scope="col">2일전일가</th>
+                                    <th scope="col">전일가</th>
+                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>가락시장</td>
+                                    <td>00원/kg</td>
+                                    <td>85원</td>
+                                    <td>00원</td>
+                                    <td>100원</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row price-div price-div-none" id="cabbage" name="radish-click">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">금주 평균 예측가</th>
+                                    <th scope="col">2일전일가</th>
+                                    <th scope="col">전일가</th>
+                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>가락시장</td>
+                                    <td>00원/kg</td>
+                                    <td>85원</td>
+                                    <td>00원</td>
+                                    <td>100원</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row price-div price-div-none" id="cabbage" name="cucumber-click">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <canvas id="myChart4"></canvas>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">금주 평균 예측가</th>
+                                    <th scope="col">2일전일가</th>
+                                    <th scope="col">전일가</th>
+                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>가락시장</td>
+                                    <td>00원/kg</td>
+                                    <td>85원</td>
+                                    <td>00원</td>
+                                    <td>100원</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row price-div price-div-none" id="cabbage" name="lettuce-click">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <canvas id="myChart5"></canvas>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 table-margin">
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">금주 평균 예측가</th>
+                                    <th scope="col">2일전일가</th>
+                                    <th scope="col">전일가</th>
+                                    <th scope="col">차액정보(2일전일가 - 전일가)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>가락시장</td>
+                                    <td>00원/kg</td>
+                                    <td>85원</td>
+                                    <td>00원</td>
+                                    <td>100원</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+    <!-- Team Section Begin -->
+<section class="team spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <div class="section-title">
+                    <h2>Hesitate to cook...? <br/>Buy the whole meal here!</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="team__item set-bg" data-setbg="{% static 'img/curry.jpg' %}">
+                    <div class="team__item__text">
+                        <h6>오뚜기</h6>
+                        <span>3분 카레 (순한맛)</span>
+                        <div class="team__item__social">
+                            <a href="https://www.ottogimall.co.kr/shop/shopdetail.html?branduid=25&search=%25C4%25AB%25B7%25B9&sort=order&xcode=001&mcode=005&scode=001&GfDT=bWx3WQ%3D%3D#zoom-layer" target="_blank"><i class="naver-logo"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="team__item set-bg" data-setbg="{% static 'img/curry_2.jpg' %}">
+                    <div class="team__item__text">
+                        <h6>오뚜기</h6>
+                        <span>통 닭다리 카레</span>
+                        <div class="team__item__social">
+                            <a href="https://www.ottogimall.co.kr/shop/shopdetail.html?branduid=3541613&search=%25C4%25AB%25B7%25B9&sort=order&xcode=001&mcode=005&scode=005&GfDT=Z2t3Uw%3D%3D" target="_blank"><i class="naver-logo"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="team__item set-bg" data-setbg="{% static 'img/curry-3.jpg' %}">
+                    <div class="team__item__text">
+                        <h6>제이키친</h6>
+                        <span>야채 떡볶이 카레 밀떡(2인분)</span>
+                        <div class="team__item__social">
+                            <a href="https://smartstore.naver.com/j__kitchen/products/3409123787?NaPm=ct%3Dkrt3ro6o%7Cci%3D8137dc9781b53b67bf6e67ec8dd2ef0187289e6c%7Ctr%3Dslsl%7Csn%3D423373%7Chk%3D3050ded7921a0c39ad3d4d0e1e34add151bf11d8" target="_blank"><i class="naver-logo"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="team__item set-bg" data-setbg="{% static 'img/curry_4.png' %}">
+                    <div class="team__item__text">
+                        <h6>청정원</h6>
+                        <span>카레여왕 스위트망고</span>
+                        <div class="team__item__social">
+                            <a href="http://www.jungoneshop.com/c/p/P1018991001" target="_blank"><i class="naver-logo"></i></a>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team Section End -->
+    {#  미래가격 끝  #}
+{% endblock content %}
+{% block other_js %}
+    <script src="{% static 'js/food_recipe_2.js' %}"></script>
+{% endblock other_js %}

@@ -19,3 +19,41 @@
 .jy__blog__details__recipe__details {
   margin-bottom: 100px;
 }
+
+.jy__blog__details__text p {
+  color: #444444;
+  margin: 30px;
+}
+
+.box {
+    position:absolute;
+    top:0; left:0; bottom:0; right:0;
+    height:10%; // 임의로 준 크기.
+    margin:10% auto;
+    }
+
+
+.challenge-img-1 {
+    content: url('../img/boards/veryeasy-pork.png') !important;
+    width: 100%;
+}
+
+.challenge-img-2 {
+    content: url('../img/boards/easy-kimbab.png') !important;
+    width: 100%;
+}
+
+.challenge-img-3 {
+    content: url('../img/boards/normal-japchae.jpg') !important;
+    width: 100%;
+}
+
+.challenge-img-4 {
+    content: url('../img/boards/hard-sundae.png') !important;
+    width: 100%;
+}
+
+.challenge-img-5 {
+    content: url('../img/boards/veryhard-foot.jpg') !important;
+    width: 100%;
+}
