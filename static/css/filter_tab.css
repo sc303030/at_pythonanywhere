@@ -353,3 +353,7 @@
 .jennie-a {
     width: 70px;
 }
+
+.popover-hover:hover{
+    box-shadow:0  0 10px #000000;
+}
